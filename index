@@ -1,0 +1,856 @@
+//fonts.googleapis.com">
+//fonts.gstatic.com" crossorigin>
+//fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+  rel="stylesheet"
+>
+
+<section class="fdl-menopausa-simples" id="form-menopausa">
+  <div class="fdl-menopausa-cartao">
+
+    <!-- IMAGEM DE TOPO: inclui o logótipo Farmácia da Liga -->
+    <div class="fdl-menopausa-hero">
+      <img
+        src="COLE_AQUI_O_URL_DA_IMAGEM_DE_TOPO"
+        alt="Farmácia da Liga — apoio na menopausa"
+      >
+    </div>
+
+    <div class="fdl-menopausa-conteudo">
+
+      <header class="fdl-menopausa-intro">
+        <span class="fdl-menopausa-etiqueta">SAÚDE E BEM-ESTAR FEMININO</span>
+        <h1>Vamos falar sobre menopausa?</h1>
+        <p>
+          A menopausa é uma fase natural da vida. Na Farmácia da Liga,
+          estamos disponíveis para ouvir, esclarecer e acompanhar esta etapa consigo.
+        </p>
+      </header>
+
+      <!-- BLOCO SABIA QUE -->
+      <section class="fdl-sabia-que">
+        <h2>Sabia que…?</h2>
+
+        <article class="fdl-sabia-que-item">
+          <span class="fdl-sabia-numero">1</span>
+          <p>
+            <strong>Os sintomas podem começar antes de os períodos pararem.</strong>
+            Durante a perimenopausa, podem surgir ciclos irregulares, afrontamentos,
+            alterações de humor, cansaço ou dificuldade de concentração.
+          </p>
+        </article>
+
+        <article class="fdl-sabia-que-item">
+          <span class="fdl-sabia-numero">2</span>
+          <p>
+            <strong>Cada mulher vive a menopausa de forma diferente.</strong>
+            Os sintomas, a intensidade e a duração desta fase podem variar muito de pessoa para pessoa.
+          </p>
+        </article>
+
+        <article class="fdl-sabia-que-item">
+          <span class="fdl-sabia-numero">3</span>
+          <p>
+            <strong>O sono pode ser afetado durante a menopausa.</strong>
+            Dificuldade em adormecer, despertares noturnos ou sono pouco reparador
+            podem estar associados a afrontamentos, suores noturnos ou alterações hormonais.
+          </p>
+        </article>
+      </section>
+
+      <form id="fdlFormularioMenopausa" novalidate>
+
+        <!-- PERGUNTA LIVRE E ANÓNIMA -->
+        <section class="fdl-bloco-pergunta">
+          <div class="fdl-icone-pergunta">?</div>
+
+          <div class="fdl-pergunta-cabecalho">
+            <h2>Este espaço é seu</h2>
+            <p>
+              Não precisa de se identificar para colocar a sua questão —
+              pode fazê-lo de forma anónima. A nossa equipa terá todo o gosto em responder.
+            </p>
+          </div>
+
+          abel for="fdlQuestaoLivre">
+            Deixe aqui a sua questão sobre a menopausa <span>*</span>
+          </label>
+
+          <textarea
+            id="fdlQuestaoLivre"
+            name="questaoLivre"
+            rows="7"
+            maxlength="2000"
+            required
+            placeholder="Exemplo: Tenho tido dificuldade em dormir e acordado várias vezes durante a noite. Isto pode estar relacionado com a menopausa?"
+          ></textarea>
+
+          <div class="fdl-contador">
+            <span>Não inclua informação urgente ou dados clínicos muito detalhados.</span>
+            <span id="fdlContadorCaracteres">0 / 2000</span>
+          </div>
+        </section>
+
+        <!-- CONSULTA DA MENOPAUSA -->
+        <section class="fdl-bloco-consulta">
+          <h2>Quer marcar uma Consulta da Menopausa? <span>*</span></h2>
+
+          <p>
+            Se preferir, pode marcar uma consulta individual com a nossa farmacêutica
+            para falar sobre este ou outros temas relacionados com a menopausa.
+          </p>
+
+          <div class="fdl-opcoes-consulta">
+            abel class="fdl-opcao-consulta">
+              <input
+                type="radio"
+                name="interesseConsulta"
+                value="Sim, gostaria de saber mais sobre a Consulta da Menopausa"
+                required
+              >
+              <span class="fdl-radio-visual"></span>
+              <span>
+                Sim, gostaria de saber mais sobre a Consulta da Menopausa.
+                Deixo os meus contactos abaixo.
+              </span>
+            </label>
+
+            abel class="fdl-opcao-consulta">
+              <input
+                type="radio"
+                name="interesseConsulta"
+                value="De momento, não tenho interesse em marcar uma consulta sobre a menopausa"
+              >
+              <span class="fdl-radio-visual"></span>
+              <span>
+                De momento, não tenho interesse em marcar uma consulta sobre a menopausa.
+              </span>
+            </label>
+          </div>
+        </section>
+
+        <!-- DADOS DE CONTACTO: APARECEM SOMENTE SE ESCOLHER "SIM" -->
+        <section class="fdl-dados-contacto" id="fdlDadosContacto" aria-hidden="true">
+          <div class="fdl-dados-contacto-titulo">
+            <span class="fdl-numero-seccao">2</span>
+            <div>
+              <h2>Dados para contacto</h2>
+              <p>
+                Ao preencher e enviar este formulário, autoriza a utilização dos seus dados
+                apenas para contactos relacionados com a Consulta da Menopausa.
+                Consulte a nossa
+                <a
+                  href="COLE_AQUI_O_URL_DA_POLITICA_DE_PRIVACIDADE"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >Política de Privacidade</a>.
+              </p>
+            </div>
+          </div>
+
+          <div class="fdl-campo">
+            abel for="fdlNome">Nome <span>*</span></label>
+            <input
+              type="text"
+              id="fdlNome"
+              name="nome"
+              autocomplete="name"
+              placeholder="O seu nome"
+            >
+          </div>
+
+          <div class="fdl-campo">
+            abel for="fdlTelefone">Telefone / Telemóvel <span>*</span></label>
+            <input
+              type="tel"
+              id="fdlTelefone"
+              name="telefone"
+              autocomplete="tel"
+              inputmode="tel"
+              placeholder="Ex.: 91 234 56 78"
+            >
+          </div>
+
+          <div class="fdl-campo">
+            abel for="fdlMelhorDia">Melhor dia da semana para contacto <span>*</span></label>
+            <select id="fdlMelhorDia" name="melhorDia">
+              <option value="">Selecione uma opção</option>
+              <option value="Segunda-feira">Segunda-feira</option>
+              <option value="Terça-feira">Terça-feira</option>
+              <option value="Quarta-feira">Quarta-feira</option>
+              <option value="Quinta-feira">Quinta-feira</option>
+              <option value="Sexta-feira">Sexta-feira</option>
+              <option value="Sábado">Sábado</option>
+              <option value="Qualquer dia útil">Qualquer dia útil</option>
+            </select>
+          </div>
+
+          <div class="fdl-campo">
+            abel for="fdlMelhorHorario">Melhor horário para contacto <span>*</span></label>
+            <select id="fdlMelhorHorario" name="melhorHorario">
+              <option value="">Selecione uma opção</option>
+              <option value="Manhã">Manhã</option>
+              <option value="Tarde">Tarde</option>
+              <option value="Indiferente">Indiferente</option>
+            </select>
+          </div>
+
+          <div class="fdl-privacidade">
+            abel>
+              <input type="checkbox" id="fdlConsentimento" name="consentimento">
+              <span>
+                Autorizo a Farmácia da Liga a utilizar os meus dados para me contactar
+                exclusivamente sobre a Consulta da Menopausa e de acordo com a Política de Privacidade.
+                <b>*</b>
+              </span>
+            </label>
+          </div>
+        </section>
+
+        <!-- MENSAGEM GERAL DE PRIVACIDADE -->
+        <div class="fdl-nota-privacidade">
+          <strong>Nota de privacidade:</strong>
+          se não pretender ser contactada, pode enviar apenas a sua questão de forma anónima.
+          Este formulário não substitui uma consulta médica, nem deve ser utilizado para situações urgentes.
+        </div>
+
+        <button type="submit" id="fdlBotaoEnviarMenopausa">
+          Enviar a minha questão
+        </button>
+
+        <p
+          id="fdlMensagemMenopausa"
+          class="fdl-mensagem-menopausa"
+          role="status"
+          aria-live="polite"
+        ></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<style>
+  .fdl-menopausa-simples,
+  .fdl-menopausa-simples * {
+    box-sizing: border-box;
+  }
+
+  .fdl-menopausa-simples {
+    --fdl-bege: #f7f0e8;
+    --fdl-bege-suave: #fcfaf7;
+    --fdl-rosa: #dfa7b2;
+    --fdl-rosa-escuro: #b87383;
+    --fdl-rosa-claro: #fceef1;
+    --fdl-verde: #abc93f;
+    --fdl-verde-escuro: #7f9b25;
+    --fdl-texto: #4c4542;
+    --fdl-texto-suave: #716965;
+    --fdl-borda: #eadbd4;
+    --fdl-branco: #ffffff;
+
+    width: 100%;
+    padding: 30px 16px;
+    background: linear-gradient(135deg, #fcf9f4 0%, #f9eef1 100%);
+    color: var(--fdl-texto);
+    font-family: "Montserrat", Arial, sans-serif;
+  }
+
+  .fdl-menopausa-cartao {
+    max-width: 880px;
+    margin: 0 auto;
+    overflow: hidden;
+    border: 1px solid var(--fdl-borda);
+    border-radius: 22px;
+    background: var(--fdl-branco);
+    box-shadow: 0 14px 38px rgba(116, 81, 73, .11);
+  }
+
+  .fdl-menopausa-hero {
+    overflow: hidden;
+    background: #faf6ef;
+    line-height: 0;
+  }
+
+  .fdl-menopausa-hero img {
+    display: block;
+    width: 100%;
+    max-height: 295px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .fdl-menopausa-conteudo {
+    padding: 42px 50px 52px;
+  }
+
+  .fdl-menopausa-intro {
+    max-width: 720px;
+    margin: 0 auto 30px;
+    text-align: center;
+  }
+
+  .fdl-menopausa-etiqueta {
+    display: inline-block;
+    margin-bottom: 12px;
+    padding: 7px 13px;
+    border-radius: 99px;
+    background: #eff5da;
+    color: var(--fdl-verde-escuro);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+
+  .fdl-menopausa-intro h1 {
+    margin: 0 0 13px;
+    color: var(--fdl-rosa-escuro);
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .fdl-menopausa-intro p {
+    margin: 0;
+    color: var(--fdl-texto-suave);
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  .fdl-sabia-que {
+    margin-bottom: 30px;
+    padding: 28px;
+    border-radius: 16px;
+    background: var(--fdl-bege);
+  }
+
+  .fdl-sabia-que h2 {
+    margin: 0 0 20px;
+    color: var(--fdl-rosa-escuro);
+    font-size: 21px;
+    font-weight: 700;
+  }
+
+  .fdl-sabia-que-item {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    margin-top: 16px;
+  }
+
+  .fdl-sabia-numero {
+    display: flex;
+    flex: 0 0 30px;
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--fdl-rosa);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+  }
+
+  .fdl-sabia-que-item p {
+    margin: 2px 0 0;
+    color: var(--fdl-texto-suave);
+    font-size: 13px;
+    line-height: 1.65;
+  }
+
+  .fdl-sabia-que-item strong {
+    color: var(--fdl-texto);
+  }
+
+  .fdl-bloco-pergunta,
+  .fdl-bloco-consulta,
+  .fdl-dados-contacto {
+    margin-top: 25px;
+    padding: 28px;
+    border: 1px solid var(--fdl-borda);
+    border-radius: 15px;
+    background: var(--fdl-bege-suave);
+  }
+
+  .fdl-bloco-pergunta {
+    position: relative;
+    padding-top: 31px;
+  }
+
+  .fdl-icone-pergunta {
+    display: flex;
+    position: absolute;
+    top: -18px;
+    left: 28px;
+    width: 38px;
+    height: 38px;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid #fff;
+    border-radius: 50%;
+    background: var(--fdl-verde);
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .fdl-pergunta-cabecalho {
+    margin-bottom: 20px;
+  }
+
+  .fdl-pergunta-cabecalho h2,
+  .fdl-bloco-consulta h2,
+  .fdl-dados-contacto h2 {
+    margin: 0 0 8px;
+    color: var(--fdl-rosa-escuro);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.35;
+  }
+
+  .fdl-pergunta-cabecalho p,
+  .fdl-bloco-consulta > p {
+    margin: 0;
+    color: var(--fdl-texto-suave);
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .fdl-bloco-pergunta > label,
+  .fdl-campo label {
+    display: block;
+    margin: 20px 0 8px;
+    color: var(--fdl-texto);
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .fdl-bloco-pergunta label span,
+  .fdl-bloco-consulta h2 span,
+  .fdl-campo label span {
+    color: var(--fdl-rosa-escuro);
+  }
+
+  .fdl-menopausa-simples textarea,
+  .fdl-menopausa-simples input[type="text"],
+  .fdl-menopausa-simples input[type="tel"],
+  .fdl-menopausa-simples select {
+    width: 100%;
+    border: 1px solid #e5d6d0;
+    border-radius: 10px;
+    outline: none;
+    background: #fff;
+    color: var(--fdl-texto);
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: 14px;
+    transition: border-color .2s ease, box-shadow .2s ease;
+  }
+
+  .fdl-menopausa-simples textarea {
+    min-height: 150px;
+    padding: 14px;
+    resize: vertical;
+    line-height: 1.6;
+  }
+
+  .fdl-menopausa-simples input[type="text"],
+  .fdl-menopausa-simples input[type="tel"],
+  .fdl-menopausa-simples select {
+    height: 48px;
+    padding: 0 14px;
+  }
+
+  .fdl-menopausa-simples textarea:focus,
+  .fdl-menopausa-simples input[type="text"]:focus,
+  .fdl-menopausa-simples input[type="tel"]:focus,
+  .fdl-menopausa-simples select:focus {
+    border-color: var(--fdl-rosa);
+    box-shadow: 0 0 0 3px rgba(223, 167, 178, .20);
+  }
+
+  .fdl-contador {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: 8px;
+    color: var(--fdl-texto-suave);
+    font-size: 11px;
+    line-height: 1.5;
+  }
+
+  .fdl-bloco-consulta h2 {
+    margin-bottom: 10px;
+  }
+
+  .fdl-opcoes-consulta {
+    display: grid;
+    gap: 12px;
+    margin-top: 21px;
+  }
+
+  .fdl-opcao-consulta {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    padding: 15px;
+    border: 1px solid #e8d9d4;
+    border-radius: 10px;
+    background: #fff;
+    color: var(--fdl-texto-suave);
+    font-size: 13px;
+    line-height: 1.6;
+    cursor: pointer;
+    transition: border-color .2s ease, background .2s ease;
+  }
+
+  .fdl-opcao-consulta:hover {
+    border-color: var(--fdl-rosa);
+    background: #fffafb;
+  }
+
+  .fdl-opcao-consulta input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+  }
+
+  .fdl-radio-visual {
+    display: inline-block;
+    position: relative;
+    flex: 0 0 18px;
+    width: 18px;
+    height: 18px;
+    margin-top: 1px;
+    border: 1.5px solid #c7b6b1;
+    border-radius: 50%;
+    background: #fff;
+  }
+
+  .fdl-opcao-consulta input:checked + .fdl-radio-visual {
+    border-color: var(--fdl-rosa-escuro);
+  }
+
+  .fdl-opcao-consulta input:checked + .fdl-radio-visual::after {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--fdl-rosa-escuro);
+    content: "";
+  }
+
+  .fdl-dados-contacto {
+    display: none;
+    border-color: #e5ccc7;
+    background: #fffafa;
+  }
+
+  .fdl-dados-contacto.visivel {
+    display: block;
+    animation: fdlAparecer .25s ease;
+  }
+
+  @keyframes fdlAparecer {
+    from {
+      transform: translateY(-8px);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .fdl-dados-contacto-titulo {
+    display: flex;
+    gap: 13px;
+    align-items: flex-start;
+  }
+
+  .fdl-numero-seccao {
+    display: flex;
+    flex: 0 0 29px;
+    width: 29px;
+    height: 29px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--fdl-verde);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+  }
+
+  .fdl-dados-contacto h2 {
+    margin-top: 1px;
+  }
+
+  .fdl-dados-contacto p {
+    margin: 0;
+    color: var(--fdl-texto-suave);
+    font-size: 12px;
+    line-height: 1.65;
+  }
+
+  .fdl-dados-contacto a {
+    color: var(--fdl-rosa-escuro);
+    font-weight: 600;
+    text-decoration: underline;
+  }
+
+  .fdl-campo {
+    margin-top: 20px;
+  }
+
+  .fdl-privacidade {
+    margin-top: 22px;
+    padding: 15px;
+    border-radius: 10px;
+    background: var(--fdl-bege);
+  }
+
+  .fdl-privacidade label {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    color: var(--fdl-texto-suave);
+    font-size: 12px;
+    line-height: 1.6;
+    cursor: pointer;
+  }
+
+  .fdl-privacidade input {
+    flex: 0 0 auto;
+    width: 17px;
+    height: 17px;
+    margin: 2px 0 0;
+    accent-color: var(--fdl-rosa-escuro);
+    cursor: pointer;
+  }
+
+  .fdl-nota-privacidade {
+    margin-top: 24px;
+    padding: 15px 17px;
+    border-left: 4px solid var(--fdl-rosa);
+    border-radius: 7px;
+    background: var(--fdl-rosa-claro);
+    color: #745b61;
+    font-size: 12px;
+    line-height: 1.65;
+  }
+
+  #fdlBotaoEnviarMenopausa {
+    display: block;
+    width: 100%;
+    margin-top: 23px;
+    padding: 16px 20px;
+    border: 0;
+    border-radius: 10px;
+    background: var(--fdl-rosa-escuro);
+    color: #fff;
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background .2s ease, transform .2s ease;
+  }
+
+  #fdlBotaoEnviarMenopausa:hover {
+    transform: translateY(-1px);
+    background: #a95f71;
+  }
+
+  #fdlBotaoEnviarMenopausa:disabled {
+    cursor: not-allowed;
+    opacity: .7;
+    transform: none;
+  }
+
+  .fdl-mensagem-menopausa {
+    display: none;
+    margin: 15px 0 0;
+    padding: 14px 16px;
+    border-radius: 9px;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.55;
+    text-align: center;
+  }
+
+  .fdl-mensagem-menopausa.sucesso {
+    display: block;
+    background: #eff5da;
+    color: #617c1d;
+  }
+
+  .fdl-mensagem-menopausa.erro {
+    display: block;
+    background: #fbecef;
+    color: #9a4757;
+  }
+
+  @media (max-width: 640px) {
+    .fdl-menopausa-simples {
+      padding: 18px 10px;
+    }
+
+    .fdl-menopausa-conteudo {
+      padding: 30px 17px 36px;
+    }
+
+    .fdl-menopausa-intro h1 {
+      font-size: 27px;
+    }
+
+    .fdl-sabia-que,
+    .fdl-bloco-pergunta,
+    .fdl-bloco-consulta,
+    .fdl-dados-contacto {
+      padding: 21px 16px;
+    }
+
+    .fdl-icone-pergunta {
+      left: 16px;
+    }
+
+    .fdl-contador {
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .fdl-menopausa-hero img {
+      min-height: 150px;
+      object-fit: cover;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('fdlFormularioMenopausa');
+    const dadosContacto = document.getElementById('fdlDadosContacto');
+    const botao = document.getElementById('fdlBotaoEnviarMenopausa');
+    const mensagem = document.getElementById('fdlMensagemMenopausa');
+
+    const questaoLivre = document.getElementById('fdlQuestaoLivre');
+    const contador = document.getElementById('fdlContadorCaracteres');
+
+    const campoNome = document.getElementById('fdlNome');
+    const campoTelefone = document.getElementById('fdlTelefone');
+    const campoMelhorDia = document.getElementById('fdlMelhorDia');
+    const campoMelhorHorario = document.getElementById('fdlMelhorHorario');
+    const campoConsentimento = document.getElementById('fdlConsentimento');
+
+    /* COLE AQUI O URL DA VOSSA APLICAÇÃO WEB APPS SCRIPT, TERMINADO EM /exec */
+    const SCRIPT_URL = 'COLE_AQUI_O_URL_TERMINADO_EM_EXEC';
+
+    function atualizarContador() {
+      contador.textContent = questaoLivre.value.length + ' / 2000';
+    }
+
+    function mostrarOuOcultarDadosContacto() {
+      const opcaoSelecionada = form.querySelector(
+        'input[name="interesseConsulta"]:checked'
+      );
+
+      const querConsulta =
+        opcaoSelecionada &&
+        opcaoSelecionada.value.indexOf('Sim, gostaria') === 0;
+
+      if (querConsulta) {
+        dadosContacto.classList.add('visivel');
+        dadosContacto.setAttribute('aria-hidden', 'false');
+
+        campoNome.required = true;
+        campoTelefone.required = true;
+        campoMelhorDia.required = true;
+        campoMelhorHorario.required = true;
+        campoConsentimento.required = true;
+
+        botao.textContent = 'Enviar questão e pedido de contacto';
+      } else {
+        dadosContacto.classList.remove('visivel');
+        dadosContacto.setAttribute('aria-hidden', 'true');
+
+        campoNome.required = false;
+        campoTelefone.required = false;
+        campoMelhorDia.required = false;
+        campoMelhorHorario.required = false;
+        campoConsentimento.required = false;
+
+        campoNome.value = '';
+        campoTelefone.value = '';
+        campoMelhorDia.value = '';
+        campoMelhorHorario.value = '';
+        campoConsentimento.checked = false;
+
+        botao.textContent = 'Enviar a minha questão';
+      }
+    }
+
+    questaoLivre.addEventListener('input', atualizarContador);
+
+    form.querySelectorAll('input[name="interesseConsulta"]').forEach(function (opcao) {
+      opcao.addEventListener('change', mostrarOuOcultarDadosContacto);
+    });
+
+    form.addEventListener('submit', async function (evento) {
+      evento.preventDefault();
+
+      mensagem.className = 'fdl-mensagem-menopausa';
+      mensagem.textContent = '';
+
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      if (SCRIPT_URL === 'COLE_AQUI_O_URL_TERMINADO_EM_EXEC') {
+        mensagem.className = 'fdl-mensagem-menopausa erro';
+        mensagem.textContent =
+          'Falta configurar o URL da aplicação Web no código do formulário.';
+        return;
+      }
+
+      botao.disabled = true;
+      botao.textContent = 'A enviar...';
+
+      const dados = new FormData(form);
+
+      try {
+        await fetch(SCRIPT_URL, {
+          method: 'POST',
+          body: dados,
+          mode: 'no-cors'
+        });
+
+        const pedidoConsulta =
+          dados.get('interesseConsulta') &&
+          dados.get('interesseConsulta').indexOf('Sim, gostaria') === 0;
+
+        form.reset();
+        dadosContacto.classList.remove('visivel');
+        dadosContacto.setAttribute('aria-hidden', 'true');
+        atualizarContador();
+        botao.textContent = 'Enviar a minha questão';
+
+        mensagem.className = 'fdl-mensagem-menopausa sucesso';
+
+        mensagem.textContent = pedidoConsulta
+          ? 'Obrigada. Recebemos a sua questão e o seu pedido de contacto. A nossa equipa irá contactá-la no período indicado.'
+          : 'Obrigada por partilhar a sua questão. A nossa equipa irá analisá-la com todo o cuidado.';
+      } catch (erro) {
+        mensagem.className = 'fdl-mensagem-menopausa erro';
+        mensagem.textContent =
+          'Não foi possível enviar o formulário neste momento. Por favor, tente novamente.';
+      } finally {
+        botao.disabled = false;
+      }
+    });
+
+    atualizarContador();
+  });
+</script>
