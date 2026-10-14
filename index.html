@@ -614,4 +614,677 @@
     border-radius: 11px;
     background: var(--rosa-escuro);
     color: #fff;
-    font-fa
+   font-family: "Montserrat", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform .2s ease, background .2s ease;
+  }
+
+  .fdl-botao-principal:hover {
+    transform: translateY(-1px);
+    background: #a65d6e;
+  }
+
+  .fdl-botao-principal:disabled {
+    cursor: wait;
+    opacity: .65;
+    transform: none;
+  }
+
+  .fdl-botao-principal span {
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  .fdl-nota-passos {
+    margin: 14px 0 0;
+    color: var(--texto-suave);
+    font-size: 11px;
+    text-align: center;
+  }
+
+  .fdl-titulo-passo {
+    display: flex;
+    gap: 13px;
+    align-items: center;
+    margin-bottom: 17px;
+  }
+
+  .fdl-numero-passo {
+    display: flex;
+    flex: 0 0 36px;
+    width: 36px;
+    height: 36px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--verde);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  .fdl-titulo-passo .fdl-subtitulo {
+    margin: 0 0 4px;
+  }
+
+  .fdl-titulo-passo h2 {
+    margin: 0;
+    color: var(--rosa-escuro);
+    font-size: 23px;
+    line-height: 1.3;
+  }
+
+  .fdl-label-campo,
+  .fdl-campo-interativo > label {
+    display: block;
+    margin: 25px 0 8px;
+    color: var(--texto);
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .fdl-label-campo span,
+  .fdl-consentimento-interativo b {
+    color: var(--rosa-escuro);
+  }
+
+  .fdl-experiencia-menopausa textarea,
+  .fdl-experiencia-menopausa input[type="text"],
+  .fdl-experiencia-menopausa input[type="tel"],
+  .fdl-experiencia-menopausa select {
+    width: 100%;
+    border: 1px solid #e5d7d1;
+    border-radius: 10px;
+    background: #fff;
+    color: var(--texto);
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: 16px;
+  }
+
+  .fdl-experiencia-menopausa textarea {
+    min-height: 170px;
+    padding: 15px;
+    resize: vertical;
+    line-height: 1.65;
+  }
+
+  .fdl-experiencia-menopausa input[type="text"],
+  .fdl-experiencia-menopausa input[type="tel"],
+  .fdl-experiencia-menopausa select {
+    height: 49px;
+    padding: 0 14px;
+  }
+
+  .fdl-experiencia-menopausa :focus-visible {
+    outline: 3px solid var(--rosa);
+    outline-offset: 3px;
+  }
+
+  .fdl-textarea-rodape {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 8px;
+    color: var(--texto-suave);
+    font-size: 11px;
+    line-height: 1.5;
+  }
+
+  .fdl-botoes-passos {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-top: 27px;
+  }
+
+  .fdl-botoes-passos .fdl-botao-principal {
+    width: auto;
+    min-width: 190px;
+    margin: 0 0 0 auto;
+  }
+
+  .fdl-escolhas-acao {
+    display: grid;
+    gap: 14px;
+    margin-top: 26px;
+  }
+
+  .fdl-cartao-acao {
+    display: flex;
+    position: relative;
+    gap: 15px;
+    align-items: center;
+    padding: 19px;
+    border: 2px solid #eadbd5;
+    border-radius: 13px;
+    background: #fff;
+    cursor: pointer;
+    transition: transform .2s ease, border-color .2s ease;
+  }
+
+  .fdl-cartao-acao:hover {
+    transform: translateY(-2px);
+    border-color: var(--rosa);
+  }
+
+  .fdl-cartao-acao.selecionado,
+  .fdl-cartao-horario.selecionado {
+    border-color: var(--rosa-escuro);
+    background: #fffafb;
+  }
+
+  .fdl-cartao-acao input,
+  .fdl-cartao-horario input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+  }
+
+  .fdl-cartao-acao:focus-within,
+  .fdl-cartao-horario:focus-within {
+    outline: 3px solid var(--rosa);
+    outline-offset: 3px;
+  }
+
+  .fdl-cartao-icone {
+    display: flex;
+    flex: 0 0 43px;
+    width: 43px;
+    height: 43px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--bege);
+    color: var(--rosa-escuro);
+    font-size: 22px;
+  }
+
+  .fdl-cartao-texto {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .fdl-cartao-texto strong {
+    color: var(--texto);
+    font-size: 14px;
+  }
+
+  .fdl-cartao-texto small {
+    color: var(--texto-suave);
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .fdl-cartao-check {
+    display: flex;
+    flex: 0 0 23px;
+    width: 23px;
+    height: 23px;
+    margin-left: auto;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #dfcfca;
+    border-radius: 50%;
+    color: transparent;
+    font-size: 13px;
+  }
+
+  .fdl-cartao-acao.selecionado .fdl-cartao-check {
+    border-color: var(--verde);
+    background: var(--verde);
+    color: #fff;
+  }
+
+  .fdl-erro-passo {
+    min-height: 18px;
+    margin: 10px 0 0;
+    color: #aa5664;
+    font-size: 12px;
+  }
+
+  .fdl-caixa-privacidade {
+    margin: 20px 0 23px;
+    padding: 15px 17px;
+    border-left: 4px solid var(--rosa);
+    border-radius: 7px;
+    background: var(--rosa-suave);
+    color: #765961;
+    font-size: 12px;
+    line-height: 1.65;
+  }
+
+  .fdl-caixa-privacidade a {
+    color: var(--rosa-escuro);
+    font-weight: 700;
+  }
+
+  .fdl-campo-interativo {
+    margin-top: 20px;
+  }
+
+  .fdl-horarios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .fdl-cartao-horario {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    padding: 17px 8px;
+    border: 2px solid #e6d8d2;
+    border-radius: 11px;
+    background: #fff;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .fdl-cartao-horario > span {
+    color: var(--rosa-escuro);
+    font-size: 20px;
+  }
+
+  .fdl-cartao-horario strong {
+    font-size: 13px;
+  }
+
+  .fdl-cartao-horario small {
+    color: var(--texto-suave);
+    font-size: 10px;
+  }
+
+  .fdl-consentimento-interativo {
+    margin-top: 23px;
+    padding: 15px;
+    border-radius: 10px;
+    background: var(--bege);
+  }
+
+  .fdl-consentimento-interativo label {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    color: var(--texto-suave);
+    font-size: 12px;
+    line-height: 1.6;
+    cursor: pointer;
+  }
+
+  .fdl-consentimento-interativo input {
+    flex: 0 0 auto;
+    width: 17px;
+    height: 17px;
+    margin: 2px 0 0;
+    accent-color: var(--rosa-escuro);
+  }
+
+  .fdl-passo-final {
+    min-height: 350px;
+  }
+
+  .fdl-confirmacao {
+    max-width: 540px;
+    margin: 35px auto 0;
+    text-align: center;
+  }
+
+  .fdl-confirmacao-icone {
+    display: flex;
+    width: 76px;
+    height: 76px;
+    margin: 0 auto 20px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--verde);
+    box-shadow: 0 0 0 10px #eff5db;
+    color: #fff;
+    font-size: 36px;
+  }
+
+  .fdl-confirmacao h2 {
+    color: var(--rosa-escuro);
+    font-size: 26px;
+  }
+
+  .fdl-confirmacao > p {
+    color: var(--texto-suave);
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  .fdl-confirmacao-nota {
+    margin-top: 27px;
+    padding: 14px;
+    border-radius: 9px;
+    background: var(--bege);
+    color: var(--texto-suave);
+    font-size: 11px;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 640px) {
+    .fdl-experiencia-menopausa {
+      padding: 17px 10px;
+    }
+
+    .fdl-experiencia-corpo {
+      padding: 30px 17px 37px;
+    }
+
+    .fdl-passos-intro h1 {
+      font-size: 27px;
+    }
+
+    .fdl-sabia-dinamico,
+    .fdl-sabia-cartao {
+      padding: 17px;
+    }
+
+    .fdl-titulo-passo h2 {
+      font-size: 20px;
+    }
+
+    .fdl-botoes-passos .fdl-botao-principal {
+      min-width: 0;
+    }
+
+    .fdl-horarios {
+      grid-template-columns: 1fr;
+    }
+
+    .fdl-textarea-rodape {
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .fdl-experiencia-hero img {
+      max-height: none;
+      height: auto;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .fdl-experiencia-menopausa * {
+      animation: none !important;
+      transition: none !important;
+    }
+  }
+</style>
+
+<script>
+(function () {
+  function iniciarFormulario() {
+    const form = document.getElementById('fdlFormularioInterativo');
+    if (!form || form.dataset.inicializado) return;
+    form.dataset.inicializado = 'sim';
+
+    const root = document.getElementById('fdlExperienciaMenopausa');
+    const questao = document.getElementById('fdlQuestaoInterativa');
+    const contador = document.getElementById('fdlContadorInterativo');
+    const continuar = document.getElementById('fdlContinuarEscolha');
+    const enviarContacto = document.getElementById('fdlEnviarComContacto');
+    const erroEscolha = document.getElementById('fdlErroEscolha');
+
+    const camposContacto = [
+      document.getElementById('fdlNomeInterativo'),
+      document.getElementById('fdlTelefoneInterativo'),
+      document.getElementById('fdlDiaInterativo'),
+      document.getElementById('fdlConsentimentoInterativo')
+    ];
+
+    const horarios = Array.from(
+      form.querySelectorAll('input[name="melhorHorario"]')
+    );
+
+    const SCRIPT_URL =
+      'https://script.google.com/macros/s/AKfycbwJUbkgjo6P3g_f1mEA5AH6aFCoPpn5OxT7sPelNzWyRklfqAeRVmu_lQV5xUjf7B33/exec';
+
+    let curiosidade = 1;
+    let aEnviar = false;
+
+    const estado = document.createElement('p');
+    estado.setAttribute('role', 'status');
+    estado.setAttribute('aria-live', 'polite');
+    estado.style.cssText =
+      'margin:16px 0 0;font-size:13px;line-height:1.6;color:#765961;';
+    form.appendChild(estado);
+
+    function mostrarPasso(numero) {
+      form.querySelectorAll('.fdl-passo').forEach(function (passo) {
+        const ativo = Number(passo.dataset.passo) === numero;
+        passo.classList.toggle('ativo', ativo);
+        passo.setAttribute('aria-hidden', String(!ativo));
+      });
+
+      root.querySelector('.fdl-progresso').style.display =
+        numero === 5 ? 'none' : 'block';
+
+      if (numero !== 5) {
+        document.getElementById('fdlPassoTexto').textContent =
+          'Passo ' + numero + ' de 4';
+
+        document.getElementById('fdlProgressoPercentagem').textContent =
+          (numero * 25) + '%';
+
+        document.getElementById('fdlProgressoBarra').style.width =
+          (numero * 25) + '%';
+      }
+
+      estado.textContent = '';
+
+      const titulo = form.querySelector(
+        '[data-passo="' + numero + '"] h1, ' +
+        '[data-passo="' + numero + '"] h2'
+      );
+
+      if (titulo) {
+        titulo.tabIndex = -1;
+        titulo.focus({ preventScroll: true });
+        titulo.scrollIntoView({ block: 'nearest' });
+      }
+    }
+
+    function mostrarCuriosidade(numero) {
+      curiosidade = Math.max(1, Math.min(3, numero));
+
+      form.querySelectorAll('.fdl-sabia-cartao').forEach(function (cartao) {
+        cartao.classList.toggle(
+          'ativo',
+          Number(cartao.dataset.curiosidade) === curiosidade
+        );
+      });
+
+      form.querySelectorAll('[data-ir-curiosidade]').forEach(function (botao) {
+        const ativo = Number(botao.dataset.irCuriosidade) === curiosidade;
+        botao.classList.toggle('ativo', ativo);
+        botao.setAttribute('aria-pressed', String(ativo));
+      });
+
+      document.getElementById('fdlSabiaAnterior').disabled =
+        curiosidade === 1;
+
+      document.getElementById('fdlSabiaSeguinte').disabled =
+        curiosidade === 3;
+    }
+
+    function validarQuestao() {
+      questao.setCustomValidity(
+        questao.value.trim() ? '' : 'Escreva a sua questão antes de continuar.'
+      );
+      return questao.reportValidity();
+    }
+
+    function definirContacto(ativo) {
+      camposContacto.forEach(function (campo) {
+        campo.required = ativo;
+      });
+
+      horarios.forEach(function (campo) {
+        campo.required = ativo;
+      });
+    }
+
+    function atualizarCartoes() {
+      form.querySelectorAll(
+        '.fdl-cartao-acao, .fdl-cartao-horario'
+      ).forEach(function (cartao) {
+        cartao.classList.toggle(
+          'selecionado',
+          cartao.querySelector('input').checked
+        );
+      });
+
+      const escolha = form.querySelector(
+        'input[name="interesseConsulta"]:checked'
+      );
+
+      continuar.innerHTML =
+        escolha && !escolha.value.startsWith('Sim, gostaria')
+          ? 'Enviar a minha questão <span>→</span>'
+          : 'Continuar <span>→</span>';
+    }
+
+    async function enviar(comContacto) {
+      if (aEnviar || !validarQuestao()) return;
+
+      definirContacto(comContacto);
+
+      if (comContacto && !form.reportValidity()) return;
+
+      const dados = new FormData(form);
+      dados.set('questaoLivre', questao.value.trim());
+
+      // Não envia contactos antigos se a utente escolher o percurso anónimo.
+      if (!comContacto) {
+        ['nome', 'telefone', 'melhorDia', 'melhorHorario', 'consentimento']
+          .forEach(function (campo) {
+            dados.delete(campo);
+          });
+      }
+
+      aEnviar = true;
+      continuar.disabled = true;
+      enviarContacto.disabled = true;
+      estado.textContent = 'A enviar a sua mensagem…';
+
+      try {
+        await fetch(SCRIPT_URL, {
+          method: 'POST',
+          body: dados,
+          mode: 'no-cors'
+        });
+
+        mostrarPasso(5);
+
+        document.getElementById('fdlTituloConfirmacao').textContent =
+          'Obrigada pela sua partilha.';
+
+        document.getElementById('fdlTextoConfirmacao').textContent =
+          comContacto
+            ? 'O pedido de envio da sua questão e dos seus contactos foi efetuado.'
+            : 'O pedido de envio da sua questão foi efetuado sem nome ou contactos.';
+
+        // Uma resposta no-cors não permite confirmar a gravação na Sheet.
+        estado.textContent =
+          'Nesta versão, o navegador não consegue confirmar automaticamente ' +
+          'o registo na folha de respostas.';
+      } catch (erro) {
+        console.error('Erro no envio:', erro);
+        estado.textContent =
+          'Não foi possível efetuar o envio. Os seus dados foram mantidos. ' +
+          'Por favor, tente novamente.';
+      } finally {
+        aEnviar = false;
+        continuar.disabled = false;
+        enviarContacto.disabled = false;
+      }
+    }
+
+    form.addEventListener('click', function (evento) {
+      const botao = evento.target.closest('button');
+      if (!botao || !form.contains(botao)) return;
+
+      if (botao.dataset.avancar) {
+        const destino = Number(botao.dataset.avancar);
+        if (destino === 3 && !validarQuestao()) return;
+        mostrarPasso(destino);
+      }
+
+      if (botao.dataset.voltar) {
+        mostrarPasso(Number(botao.dataset.voltar));
+      }
+
+      if (botao.dataset.irCuriosidade) {
+        mostrarCuriosidade(Number(botao.dataset.irCuriosidade));
+      }
+
+      if (botao.id === 'fdlSabiaAnterior') {
+        mostrarCuriosidade(curiosidade - 1);
+      }
+
+      if (botao.id === 'fdlSabiaSeguinte') {
+        mostrarCuriosidade(curiosidade + 1);
+      }
+
+      if (botao.id === 'fdlContinuarEscolha') {
+        const escolha = form.querySelector(
+          'input[name="interesseConsulta"]:checked'
+        );
+
+        if (!escolha) {
+          erroEscolha.textContent =
+            'Escolha como prefere continuar.';
+          return;
+        }
+
+        erroEscolha.textContent = '';
+
+        if (escolha.value.startsWith('Sim, gostaria')) {
+          definirContacto(true);
+          mostrarPasso(4);
+        } else {
+          enviar(false);
+        }
+      }
+    });
+
+    form.addEventListener('change', atualizarCartoes);
+
+    questao.addEventListener('input', function () {
+      questao.setCustomValidity('');
+      contador.textContent = questao.value.length + ' / 2000';
+    });
+
+    form.addEventListener('submit', function (evento) {
+      evento.preventDefault();
+
+      const escolha = form.querySelector(
+        'input[name="interesseConsulta"]:checked'
+      );
+
+      if (escolha && escolha.value.startsWith('Sim, gostaria')) {
+        enviar(true);
+      }
+    });
+
+    definirContacto(false);
+    mostrarCuriosidade(1);
+    atualizarCartoes();
+    console.info('Formulário Farmácia da Liga inicializado.');
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', iniciarFormulario);
+  } else {
+    iniciarFormulario();
+  }
+})();
+</script>
