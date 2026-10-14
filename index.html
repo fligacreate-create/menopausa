@@ -1194,7 +1194,8 @@
 
         // Uma resposta no-cors não permite confirmar a gravação na Sheet.
         estado.textContent =
-
+          'Nesta versão, o navegador não consegue confirmar automaticamente ' +
+          'o registo na folha de respostas.';
       } catch (erro) {
         console.error('Erro no envio:', erro);
         estado.textContent =
