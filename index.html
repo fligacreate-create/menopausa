@@ -1193,9 +1193,7 @@
             : 'O pedido de envio da sua questão foi efetuado sem nome ou contactos.';
 
         // Uma resposta no-cors não permite confirmar a gravação na Sheet.
-        estado.textContent =
-          'Nesta versão, o navegador não consegue confirmar automaticamente ' +
-          'o registo na folha de respostas.';
+estado.textContent = '';
       } catch (erro) {
         console.error('Erro no envio:', erro);
         estado.textContent =
