@@ -1,1287 +1,1626 @@
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link
-  href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
-  rel="stylesheet"
->
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<section class="fdl-experiencia-menopausa" id="fdlExperienciaMenopausa">
-  <div class="fdl-experiencia-cartao">
+  <title>Vamos falar sobre menopausa? | Farmácia da Liga</title>
 
-    <div class="fdl-experiencia-hero">
+  <meta
+    name="description"
+    content="Coloque a sua questão sobre a menopausa ou peça contacto para saber mais sobre a Consulta da Menopausa da Farmácia da Liga."
+  >
+
+  <link rel="icon" href="data:,">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    :root {
+      --bege: #f7f0e8;
+      --bege-claro: #fcfaf7;
+      --rosa: #dfa7b2;
+      --rosa-escuro: #a65d70;
+      --rosa-suave: #fceef1;
+      --verde: #abc93f;
+      --verde-escuro: #657c20;
+      --texto: #4d4643;
+      --texto-suave: #716966;
+      --borda: #eadbd4;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 30px 16px;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #fcf9f4, #f9eef1);
+      color: var(--texto);
+      font-family: "Montserrat", Arial, sans-serif;
+    }
+
+    button,
+    input,
+    textarea,
+    select {
+      font: inherit;
+    }
+
+    button,
+    label {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    [hidden] {
+      display: none !important;
+    }
+
+    :focus-visible {
+      outline: 3px solid var(--rosa);
+      outline-offset: 4px;
+    }
+
+    .cartao {
+      max-width: 850px;
+      margin: 0 auto;
+      overflow: hidden;
+      border: 1px solid var(--borda);
+      border-radius: 24px;
+      background: #fff;
+      box-shadow: 0 16px 42px rgba(114, 75, 67, .12);
+    }
+
+    .hero {
+      background: var(--bege-claro);
+      line-height: 0;
+    }
+
+    .hero img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .corpo {
+      padding: 38px 50px 45px;
+    }
+
+    .progresso {
+      margin-bottom: 32px;
+    }
+
+    .progresso-topo {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 9px;
+      color: var(--texto-suave);
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    .progresso-trilho {
+      height: 6px;
+      overflow: hidden;
+      border-radius: 99px;
+      background: #f0e6e2;
+    }
+
+    .progresso-barra {
+      width: 25%;
+      height: 100%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, var(--verde), var(--rosa));
+      transition: width .3s ease;
+    }
+
+    .passo {
+      animation: entrar .3s ease;
+    }
+
+    @keyframes entrar {
+      from {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .intro {
+      margin-bottom: 28px;
+      text-align: center;
+    }
+
+    .etiqueta {
+      display: inline-block;
+      margin-bottom: 13px;
+      padding: 7px 13px;
+      border-radius: 99px;
+      background: #eff5da;
+      color: var(--verde-escuro);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    h1 {
+      margin: 0 0 14px;
+      color: var(--rosa-escuro);
+      font-size: 34px;
+      line-height: 1.2;
+    }
+
+    .intro p,
+    .texto {
+      margin: 0;
+      color: var(--texto-suave);
+      font-size: 14px;
+      line-height: 1.75;
+    }
+
+    .sabia {
+      padding: 25px;
+      border-radius: 16px;
+      background: var(--bege);
+    }
+
+    .sabia-titulo {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      margin: 0 0 20px;
+      color: var(--rosa-escuro);
+      font-size: 17px;
+      font-weight: 700;
+    }
+
+    .sabia-titulo::before {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--verde);
+      content: "";
+    }
+
+    .curiosidade {
+      min-height: 205px;
+      padding: 24px;
+      border: 1px solid var(--borda);
+      border-radius: 14px;
+      background: #fff;
+      animation: entrar .3s ease;
+    }
+
+    .curiosidade-numero {
+      display: block;
+      margin-bottom: 12px;
+      color: var(--rosa-escuro);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+    }
+
+    .curiosidade h2 {
+      margin: 0 0 12px;
+      font-size: 20px;
+      line-height: 1.4;
+    }
+
+    .curiosidade p {
+      margin: 0;
+      color: var(--texto-suave);
+      font-size: 13px;
+      line-height: 1.75;
+    }
+
+    .sabia-navegacao {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-top: 17px;
+    }
+
+    .botao-texto {
+      padding: 8px 0;
+      border: 0;
+      background: transparent;
+      color: var(--rosa-escuro);
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .botao-texto:disabled {
+      opacity: .35;
+      cursor: default;
+    }
+
+    .paginacao {
+      display: flex;
+      gap: 4px;
+    }
+
+    .paginacao button {
+      display: flex;
+      width: 30px;
+      height: 30px;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      border: 0;
+      border-radius: 6px;
+      background: transparent;
+      cursor: pointer;
+    }
+
+    .paginacao button::before {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #dbc7c2;
+      content: "";
+    }
+
+    .paginacao button[aria-pressed="true"]::before {
+      width: 22px;
+      border-radius: 99px;
+      background: var(--rosa-escuro);
+    }
+
+    .botao-principal {
+      display: flex;
+      width: 100%;
+      min-height: 53px;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 14px 20px;
+      border: 0;
+      border-radius: 11px;
+      background: var(--rosa-escuro);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background .2s ease, transform .2s ease;
+    }
+
+    .botao-principal:hover:not(:disabled) {
+      transform: translateY(-1px);
+      background: #914d5f;
+    }
+
+    .botao-principal:disabled {
+      opacity: .65;
+      cursor: wait;
+    }
+
+    .botao-iniciar {
+      margin-top: 25px;
+    }
+
+    .nota {
+      margin: 14px 0 0;
+      color: var(--texto-suave);
+      font-size: 11px;
+      line-height: 1.65;
+      text-align: center;
+    }
+
+    .titulo-passo {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      margin-bottom: 18px;
+    }
+
+    .numero-passo {
+      display: flex;
+      flex: 0 0 36px;
+      width: 36px;
+      height: 36px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: var(--verde);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .subtitulo {
+      margin: 0 0 5px;
+      color: var(--verde-escuro);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .titulo-passo h2 {
+      margin: 0;
+      color: var(--rosa-escuro);
+      font-size: 23px;
+      line-height: 1.35;
+    }
+
+    .campo {
+      margin-top: 23px;
+    }
+
+    .campo > label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+
+    .obrigatorio {
+      color: var(--rosa-escuro);
+    }
+
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    select,
+    textarea {
+      width: 100%;
+      border: 1px solid #e5d7d1;
+      border-radius: 10px;
+      background: #fff;
+      color: var(--texto);
+      font-size: 16px;
+    }
+
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    select {
+      min-height: 49px;
+      padding: 12px 14px;
+    }
+
+    textarea {
+      min-height: 170px;
+      padding: 15px;
+      resize: vertical;
+      line-height: 1.65;
+    }
+
+    .rodape-campo {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      margin-top: 8px;
+      color: var(--texto-suave);
+      font-size: 11px;
+      line-height: 1.5;
+    }
+
+    .ajuda {
+      margin: 9px 0 0;
+      color: var(--texto-suave);
+      font-size: 12px;
+      line-height: 1.65;
+    }
+
+    .botoes {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-top: 27px;
+    }
+
+    .botoes .botao-principal {
+      width: auto;
+      min-width: 185px;
+      margin-left: auto;
+    }
+
+    .escolhas {
+      display: grid;
+      gap: 14px;
+      margin-top: 26px;
+    }
+
+    .opcao {
+      display: flex;
+      position: relative;
+      align-items: center;
+      gap: 15px;
+      padding: 19px;
+      border: 2px solid var(--borda);
+      border-radius: 13px;
+      background: #fff;
+      cursor: pointer;
+      transition: border-color .2s ease, transform .2s ease;
+    }
+
+    .opcao:hover {
+      transform: translateY(-2px);
+      border-color: var(--rosa);
+    }
+
+    .opcao.selecionada,
+    .horario.selecionado {
+      border-color: var(--rosa-escuro);
+      background: #fffafb;
+    }
+
+    .opcao input,
+    .horario input {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      opacity: 0;
+    }
+
+    .opcao:focus-within,
+    .horario:focus-within {
+      outline: 3px solid var(--rosa);
+      outline-offset: 3px;
+    }
+
+    .icone-opcao {
+      display: flex;
+      flex: 0 0 43px;
+      width: 43px;
+      height: 43px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: var(--bege);
+      color: var(--rosa-escuro);
+      font-size: 22px;
+    }
+
+    .texto-opcao {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .texto-opcao strong {
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    .texto-opcao small {
+      color: var(--texto-suave);
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .check-opcao {
+      display: flex;
+      flex: 0 0 23px;
+      width: 23px;
+      height: 23px;
+      align-items: center;
+      justify-content: center;
+      margin-left: auto;
+      border: 1px solid #dfcfca;
+      border-radius: 50%;
+      color: transparent;
+      font-size: 13px;
+    }
+
+    .opcao.selecionada .check-opcao {
+      border-color: var(--verde);
+      background: var(--verde);
+      color: #fff;
+    }
+
+    .caixa-email,
+    .caixa-privacidade {
+      margin-top: 23px;
+      padding: 20px;
+      border-radius: 12px;
+      background: var(--bege);
+    }
+
+    .caixa-email .campo {
+      margin-top: 0;
+    }
+
+    .caixa-privacidade {
+      border-left: 4px solid var(--rosa);
+      background: var(--rosa-suave);
+      color: #765961;
+      font-size: 12px;
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--rosa-escuro);
+    }
+
+    .horarios {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      border: 0;
+    }
+
+    .horarios legend {
+      margin-bottom: 9px;
+      padding: 0;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .horario {
+      display: flex;
+      position: relative;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      padding: 18px 8px;
+      border: 2px solid var(--borda);
+      border-radius: 11px;
+      background: #fff;
+      cursor: pointer;
+    }
+
+    .horario strong {
+      font-size: 13px;
+    }
+
+    .horario span {
+      color: var(--rosa-escuro);
+      font-size: 21px;
+    }
+
+    .consentimento {
+      margin-top: 23px;
+      padding: 15px;
+      border-radius: 10px;
+      background: var(--bege);
+    }
+
+    .consentimento label {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      color: var(--texto-suave);
+      font-size: 12px;
+      line-height: 1.65;
+      cursor: pointer;
+    }
+
+    .consentimento input {
+      flex: 0 0 auto;
+      width: 17px;
+      height: 17px;
+      margin: 3px 0 0;
+      accent-color: var(--rosa-escuro);
+    }
+
+    .erro {
+      color: #a33f53;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .estado {
+      margin: 18px 0 0;
+      color: var(--texto-suave);
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .estado:empty,
+    .erro:empty {
+      display: none;
+    }
+
+    .confirmacao {
+      max-width: 540px;
+      margin: 30px auto;
+      text-align: center;
+    }
+
+    .confirmacao-icone {
+      display: flex;
+      width: 76px;
+      height: 76px;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 25px;
+      border-radius: 50%;
+      background: var(--verde);
+      box-shadow: 0 0 0 10px #eff5db;
+      color: #fff;
+      font-size: 36px;
+    }
+
+    .confirmacao h2 {
+      color: var(--rosa-escuro);
+      font-size: 26px;
+    }
+
+    .confirmacao p {
+      color: var(--texto-suave);
+      font-size: 14px;
+      line-height: 1.75;
+    }
+
+    .nota-final {
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid var(--borda);
+      color: var(--texto-suave);
+      font-size: 11px;
+      line-height: 1.7;
+      text-align: center;
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 15px 10px;
+      }
+
+      .corpo {
+        padding: 28px 18px 32px;
+      }
+
+      h1 {
+        font-size: 27px;
+      }
+
+      .sabia,
+      .curiosidade {
+        padding: 17px;
+      }
+
+      .curiosidade {
+        min-height: 245px;
+      }
+
+      .curiosidade h2 {
+        font-size: 19px;
+      }
+
+      .titulo-passo h2 {
+        font-size: 20px;
+      }
+
+      .opcao {
+        padding: 15px 12px;
+        gap: 10px;
+      }
+
+      .icone-opcao {
+        flex-basis: 35px;
+        width: 35px;
+        height: 35px;
+      }
+
+      .botoes .botao-principal {
+        min-width: 0;
+        flex: 1;
+      }
+
+      .rodape-campo {
+        flex-direction: column;
+        gap: 3px;
+      }
+
+      .horarios {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation: none !important;
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="cartao" id="formularioMenopausa">
+
+    <div class="hero">
       <img
         src="https://raw.githubusercontent.com/fligacreate-create/menopausa/main/Menopausa_formulario.jpg"
         alt="Farmácia da Liga — apoio na menopausa"
       >
     </div>
 
-    <div class="fdl-experiencia-corpo">
+    <div class="corpo">
 
-      <div class="fdl-progresso" aria-label="Progresso do formulário">
-        <div class="fdl-progresso-topo">
-          <span id="fdlPassoTexto">Passo 1 de 4</span>
-          <span id="fdlProgressoPercentagem">25%</span>
+      <noscript>
+        <p class="erro">
+          Para utilizar este formulário, ative o JavaScript no navegador.
+        </p>
+      </noscript>
+
+      <div class="progresso" id="blocoProgresso">
+        <div class="progresso-topo">
+          <span id="passoTexto">Passo 1 de 4</span>
+          <span id="progressoPercentagem">25%</span>
         </div>
 
-        <div class="fdl-progresso-trilho">
-          <div class="fdl-progresso-barra" id="fdlProgressoBarra"></div>
+        <div
+          class="progresso-trilho"
+          id="progressoAcessivel"
+          role="progressbar"
+          aria-label="Progresso do formulário"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          aria-valuenow="25"
+        >
+          <div class="progresso-barra" id="barraProgresso"></div>
         </div>
       </div>
 
-      <form id="fdlFormularioInterativo" novalidate>
+      <form id="form" novalidate>
 
-        <!-- PASSO 1: SABIA QUE -->
-        <section class="fdl-passo ativo" data-passo="1">
-          <div class="fdl-passos-intro">
-            <span class="fdl-etiqueta">SAÚDE E BEM-ESTAR FEMININO</span>
+        <!-- PASSO 1 -->
+        <section class="passo" data-passo="1">
+          <header class="intro">
+            <span class="etiqueta">SAÚDE E BEM-ESTAR FEMININO</span>
+
             <h1>Vamos falar sobre menopausa?</h1>
+
             <p>
-              A menopausa é uma fase natural da vida. Estamos aqui para ouvir,
-              esclarecer dúvidas e acompanhar esta etapa consigo.
+              Estamos aqui para ouvir, esclarecer dúvidas
+              e acompanhar esta etapa consigo.
             </p>
-          </div>
+          </header>
 
-          <div class="fdl-sabia-dinamico">
-            <div class="fdl-sabia-cabecalho">
-              <span class="fdl-sabia-ponto"></span>
-              <p>Sabia que…?</p>
+          <div class="sabia">
+            <p class="sabia-titulo">Sabia que…?</p>
+
+            <div aria-live="polite" aria-atomic="true">
+              <article class="curiosidade" data-curiosidade="1">
+                <span class="curiosidade-numero">01</span>
+
+                <h2>
+                  Os sintomas podem surgir antes de os períodos pararem.
+                </h2>
+
+                <p>
+                  Durante a perimenopausa, o ciclo pode tornar-se irregular
+                  e podem surgir afrontamentos, cansaço, alterações de humor
+                  ou dificuldade de concentração.
+                </p>
+              </article>
+
+              <article class="curiosidade" data-curiosidade="2" hidden>
+                <span class="curiosidade-numero">02</span>
+
+                <h2>Cada mulher vive esta fase de forma diferente.</h2>
+
+                <p>
+                  Não existe uma experiência única: os sintomas, a intensidade
+                  e a duração podem variar muito de pessoa para pessoa.
+                </p>
+              </article>
+
+              <article class="curiosidade" data-curiosidade="3" hidden>
+                <span class="curiosidade-numero">03</span>
+
+                <h2>O sono pode mudar durante a menopausa.</h2>
+
+                <p>
+                  Dificuldade em adormecer, despertares noturnos e sono pouco
+                  reparador podem estar associados a afrontamentos,
+                  suores noturnos ou alterações hormonais.
+                </p>
+              </article>
             </div>
 
-            <div class="fdl-sabia-cartao ativo" data-curiosidade="1">
-              <span class="fdl-sabia-numero">01</span>
-              <h2>Os sintomas podem surgir antes de os períodos pararem.</h2>
-              <p>
-                Durante a perimenopausa, o ciclo pode tornar-se irregular e podem
-                surgir afrontamentos, cansaço, alterações de humor ou dificuldade de concentração.
-              </p>
-            </div>
-
-            <div class="fdl-sabia-cartao" data-curiosidade="2">
-              <span class="fdl-sabia-numero">02</span>
-              <h2>Cada mulher vive esta fase de forma diferente.</h2>
-              <p>
-                Não existe uma experiência única: os sintomas, a intensidade e a duração
-                podem variar muito de pessoa para pessoa.
-              </p>
-            </div>
-
-            <div class="fdl-sabia-cartao" data-curiosidade="3">
-              <span class="fdl-sabia-numero">03</span>
-              <h2>O sono pode mudar durante a menopausa.</h2>
-              <p>
-                Dificuldade em adormecer, despertares noturnos e sono pouco reparador
-                podem estar associados a afrontamentos, suores noturnos ou alterações hormonais.
-              </p>
-            </div>
-
-            <div class="fdl-sabia-navegacao">
-              <button type="button" class="fdl-botao-secundario" id="fdlSabiaAnterior">
+            <div class="sabia-navegacao">
+              <button
+                type="button"
+                class="botao-texto"
+                id="curiosidadeAnterior"
+                disabled
+              >
                 ← Anterior
               </button>
 
-              <div class="fdl-sabia-paginacao" aria-label="Curiosidades">
-                <button type="button" class="ativo" data-ir-curiosidade="1" aria-label="Curiosidade 1"></button>
-                <button type="button" data-ir-curiosidade="2" aria-label="Curiosidade 2"></button>
-                <button type="button" data-ir-curiosidade="3" aria-label="Curiosidade 3"></button>
+              <div class="paginacao" aria-label="Escolher curiosidade">
+                <button
+                  type="button"
+                  data-curiosidade-botao="1"
+                  aria-label="Curiosidade 1"
+                  aria-pressed="true"
+                ></button>
+
+                <button
+                  type="button"
+                  data-curiosidade-botao="2"
+                  aria-label="Curiosidade 2"
+                  aria-pressed="false"
+                ></button>
+
+                <button
+                  type="button"
+                  data-curiosidade-botao="3"
+                  aria-label="Curiosidade 3"
+                  aria-pressed="false"
+                ></button>
               </div>
 
-              <button type="button" class="fdl-botao-secundario" id="fdlSabiaSeguinte">
+              <button
+                type="button"
+                class="botao-texto"
+                id="curiosidadeSeguinte"
+              >
                 Seguinte →
               </button>
             </div>
           </div>
 
-          <button type="button" class="fdl-botao-principal" data-avancar="2">
-            Tenho uma questão
-            <span>→</span>
+          <button
+            type="button"
+            class="botao-principal botao-iniciar"
+            data-avancar="2"
+          >
+            Tenho uma questão <span aria-hidden="true">→</span>
           </button>
 
-          <p class="fdl-nota-passos">
-            Pode colocar a sua questão de forma anónima.
+          <p class="nota">
+            Não precisa de indicar o nome.
+            Pediremos apenas um email para lhe enviar a resposta.
           </p>
         </section>
 
-        <!-- PASSO 2: QUESTÃO LIVRE -->
-        <section class="fdl-passo" data-passo="2">
-          <div class="fdl-titulo-passo">
-            <span class="fdl-numero-passo">2</span>
+        <!-- PASSO 2 -->
+        <section class="passo" data-passo="2" hidden>
+          <div class="titulo-passo">
+            <span class="numero-passo" aria-hidden="true">2</span>
+
             <div>
-              <p class="fdl-subtitulo">ESTE ESPAÇO É SEU</p>
+              <p class="subtitulo">ESTE ESPAÇO É SEU</p>
               <h2>O que gostaria de perguntar?</h2>
             </div>
           </div>
 
-          <p class="fdl-texto-passo">
-            Não precisa de se identificar. Escreva a sua questão sobre a menopausa
-            da forma que se sentir mais confortável. A nossa equipa terá todo o gosto em responder.
+          <p class="texto">
+            Não precisa de indicar o nome para colocar a sua questão.
+            Escreva da forma que se sentir mais confortável.
+            A nossa equipa terá todo o gosto em responder.
           </p>
 
-          <label class="fdl-label-campo" for="fdlQuestaoInterativa">
-            A minha questão sobre a menopausa <span>*</span>
-          </label>
+          <div class="campo">
+            <label for="questao">
+              Deixe aqui a sua questão sobre a menopausa
+              <span class="obrigatorio">*</span>
+            </label>
 
-          <textarea
-            id="fdlQuestaoInterativa"
-            name="questaoLivre"
-            rows="8"
-            maxlength="2000"
-            required
-            placeholder="Exemplo: Tenho tido dificuldade em dormir e acordado várias vezes durante a noite. Isto pode estar relacionado com a menopausa?"
-          ></textarea>
+            <textarea
+              id="questao"
+              name="questaoLivre"
+              rows="8"
+              maxlength="2000"
+              required
+              aria-describedby="ajudaQuestao"
+              placeholder="Exemplo: Tenho tido dificuldade em dormir e acordado várias vezes durante a noite. Isto pode estar relacionado com a menopausa?"
+            ></textarea>
 
-          <div class="fdl-textarea-rodape">
-            <span>Não inclua dados urgentes ou informação clínica detalhada.</span>
-            <span id="fdlContadorInterativo">0 / 2000</span>
+            <div class="rodape-campo">
+              <span id="ajudaQuestao">
+                Evite incluir dados de identificação ou informação clínica detalhada.
+              </span>
+              <span id="contador">0 / 2000</span>
+            </div>
           </div>
 
-          <div class="fdl-botoes-passos">
-            <button type="button" class="fdl-botao-voltar" data-voltar="1">
+          <div class="botoes">
+            <button type="button" class="botao-texto" data-voltar="1">
               ← Voltar
             </button>
 
-            <button type="button" class="fdl-botao-principal" data-avancar="3">
-              Continuar
-              <span>→</span>
+            <button type="button" class="botao-principal" data-avancar="3">
+              Continuar <span aria-hidden="true">→</span>
             </button>
           </div>
         </section>
 
-        <!-- PASSO 3: ESCOLHA DE AÇÃO -->
-        <section class="fdl-passo" data-passo="3">
-          <div class="fdl-titulo-passo">
-            <span class="fdl-numero-passo">3</span>
+        <!-- PASSO 3 -->
+        <section class="passo" data-passo="3" hidden>
+          <div class="titulo-passo">
+            <span class="numero-passo" aria-hidden="true">3</span>
+
             <div>
-              <p class="fdl-subtitulo">COMO PREFERE CONTINUAR?</p>
+              <p class="subtitulo">COMO PREFERE CONTINUAR?</p>
               <h2>Escolha a opção mais adequada para si</h2>
             </div>
           </div>
 
-          <p class="fdl-texto-passo">
-            Pode enviar a sua questão de forma anónima ou pedir para ser contactada
-            pela nossa equipa para saber mais sobre a Consulta da Menopausa.
+          <p class="texto">
+            Pode receber uma resposta por email, sem indicar o nome,
+            ou pedir contacto para saber mais sobre a Consulta da Menopausa.
           </p>
 
-          <div class="fdl-escolhas-acao">
-            <label class="fdl-cartao-acao" data-opcao="anonima">
+          <div class="escolhas">
+            <label class="opcao">
               <input
                 type="radio"
                 name="interesseConsulta"
-                value="De momento, não tenho interesse em marcar uma consulta sobre a menopausa"
+                value="Quero receber uma resposta por email, sem indicar o nome"
+                data-percurso="email"
               >
 
-              <span class="fdl-cartao-icone">✉</span>
+              <span class="icone-opcao" aria-hidden="true">✉</span>
 
-              <span class="fdl-cartao-texto">
-                <strong>Enviar apenas a minha questão</strong>
-                <small>Não preciso de deixar nome ou contacto.</small>
+              <span class="texto-opcao">
+                <strong>Quero receber uma resposta por email</strong>
+                <small>
+                  Não preciso de indicar o nome. Deixo apenas o meu email.
+                </small>
               </span>
 
-              <span class="fdl-cartao-check">✓</span>
+              <span class="check-opcao" aria-hidden="true">✓</span>
             </label>
 
-            <label class="fdl-cartao-acao" data-opcao="consulta">
+            <label class="opcao">
               <input
                 type="radio"
                 name="interesseConsulta"
                 value="Sim, gostaria de saber mais sobre a Consulta da Menopausa"
+                data-percurso="consulta"
               >
 
-              <span class="fdl-cartao-icone">♡</span>
+              <span class="icone-opcao" aria-hidden="true">♡</span>
 
-              <span class="fdl-cartao-texto">
+              <span class="texto-opcao">
                 <strong>Quero falar com uma farmacêutica</strong>
-                <small>Quero saber mais sobre a Consulta da Menopausa.</small>
+                <small>
+                  Quero saber mais sobre a Consulta da Menopausa.
+                </small>
               </span>
 
-              <span class="fdl-cartao-check">✓</span>
+              <span class="check-opcao" aria-hidden="true">✓</span>
             </label>
           </div>
 
-          <p class="fdl-erro-passo" id="fdlErroEscolha"></p>
+          <div class="caixa-email" id="blocoEmail" hidden>
+            <div class="campo">
+              <label for="email">
+                Email para receber a resposta
+                <span class="obrigatorio">*</span>
+              </label>
 
-          <div class="fdl-botoes-passos">
-            <button type="button" class="fdl-botao-voltar" data-voltar="2">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                autocomplete="email"
+                inputmode="email"
+                maxlength="254"
+                placeholder="Ex.: oseuemail@exemplo.pt"
+                aria-describedby="ajudaEmail"
+                disabled
+              >
+
+              <p class="ajuda" id="ajudaEmail">
+                Utilizaremos este email apenas para responder à sua questão.
+                Não precisa de indicar o nome.
+              </p>
+            </div>
+
+            <div class="consentimento">
+              <label>
+                <input
+                  type="checkbox"
+                  id="consentimentoEmail"
+                  name="consentimentoEmail"
+                  disabled
+                >
+
+                <span>
+                  Autorizo a utilização do meu email e da informação que
+                  partilhei para responder à minha questão, de acordo com a
+                  <a class="link-privacidade" target="_blank" rel="noopener">
+                    Política de Privacidade
+                  </a>.
+                  <span class="obrigatorio">*</span>
+                </span>
+              </label>
+            </div>
+          </div>
+
+          <p class="erro" id="erroEscolha" role="alert"></p>
+
+          <div class="botoes">
+            <button type="button" class="botao-texto" data-voltar="2">
               ← Voltar
             </button>
 
-            <button type="button" class="fdl-botao-principal" id="fdlContinuarEscolha">
-              Continuar
-              <span>→</span>
+            <button type="button" class="botao-principal" id="continuarEscolha">
+              Continuar <span aria-hidden="true">→</span>
             </button>
           </div>
         </section>
 
-        <!-- PASSO 4: CONTACTOS -->
-        <section class="fdl-passo" data-passo="4">
-          <div class="fdl-titulo-passo">
-            <span class="fdl-numero-passo">4</span>
+        <!-- PASSO 4 -->
+        <section class="passo" data-passo="4" hidden>
+          <div class="titulo-passo">
+            <span class="numero-passo" aria-hidden="true">4</span>
+
             <div>
-              <p class="fdl-subtitulo">DADOS PARA CONTACTO</p>
+              <p class="subtitulo">DADOS PARA CONTACTO</p>
               <h2>Quando prefere que falemos consigo?</h2>
             </div>
           </div>
 
-          <div class="fdl-caixa-privacidade">
-            Ao preencher e enviar este formulário, autoriza a utilização dos seus dados
-            exclusivamente para contacto relacionado com a Consulta da Menopausa.
-            Consulte a nossa
-            <a
-              href="COLE_AQUI_O_URL_DA_POLITICA_DE_PRIVACIDADE"
-              target="_blank"
-              rel="noopener noreferrer"
-            >Política de Privacidade</a>.
+          <p class="texto">
+            Deixe os seus contactos para saber mais sobre uma consulta
+            individual com a nossa farmacêutica.
+          </p>
+
+          <div class="caixa-privacidade">
+            Os dados indicados serão utilizados para contacto relacionado
+            com a Consulta da Menopausa. Consulte a nossa
+            <a class="link-privacidade" target="_blank" rel="noopener">
+              Política de Privacidade
+            </a>.
           </div>
 
-          <div class="fdl-campo-interativo">
-            <label for="fdlNomeInterativo">Nome <span>*</span></label>
+          <div class="campo">
+            <label for="nome">
+              Nome <span class="obrigatorio">*</span>
+            </label>
+
             <input
               type="text"
-              id="fdlNomeInterativo"
+              id="nome"
               name="nome"
               autocomplete="name"
+              maxlength="150"
               placeholder="O seu nome"
+              disabled
             >
           </div>
 
-          <div class="fdl-campo-interativo">
-            <label for="fdlTelefoneInterativo">Telefone / Telemóvel <span>*</span></label>
+          <div class="campo">
+            <label for="telefone">
+              Telefone / Telemóvel <span class="obrigatorio">*</span>
+            </label>
+
             <input
               type="tel"
-              id="fdlTelefoneInterativo"
+              id="telefone"
               name="telefone"
               autocomplete="tel"
               inputmode="tel"
+              maxlength="30"
               placeholder="Ex.: 91 234 56 78"
+              disabled
             >
           </div>
 
-          <div class="fdl-campo-interativo">
-            <label for="fdlDiaInterativo">Melhor dia da semana para contacto <span>*</span></label>
+          <div class="campo">
+            <label for="dia">
+              Melhor dia da semana para contacto
+              <span class="obrigatorio">*</span>
+            </label>
 
-            <select id="fdlDiaInterativo" name="melhorDia">
+            <select id="dia" name="melhorDia" disabled>
               <option value="">Selecione uma opção</option>
               <option value="Segunda-feira">Segunda-feira</option>
               <option value="Terça-feira">Terça-feira</option>
               <option value="Quarta-feira">Quarta-feira</option>
               <option value="Quinta-feira">Quinta-feira</option>
               <option value="Sexta-feira">Sexta-feira</option>
+              <option value="Sábado">Sábado</option>
               <option value="Qualquer dia útil">Qualquer dia útil</option>
             </select>
           </div>
 
-          <div class="fdl-campo-interativo">
-            <label>Melhor horário para contacto <span>*</span></label>
+          <div class="campo">
+            <fieldset class="horarios">
+              <legend>
+                Melhor período para contacto
+                <span class="obrigatorio">*</span>
+              </legend>
 
-            <div class="fdl-horarios">
-              <label class="fdl-cartao-horario">
-                <input type="radio" name="melhorHorario" value="Manhã">
-                <span>☀</span>
+              <label class="horario">
+                <input
+                  type="radio"
+                  name="melhorHorario"
+                  value="Manhã"
+                  disabled
+                >
+                <span aria-hidden="true">☀</span>
                 <strong>Manhã</strong>
-                <small>09h00 – 13h00</small>
               </label>
 
-              <label class="fdl-cartao-horario">
-                <input type="radio" name="melhorHorario" value="Tarde">
-                <span>◐</span>
+              <label class="horario">
+                <input
+                  type="radio"
+                  name="melhorHorario"
+                  value="Tarde"
+                  disabled
+                >
+                <span aria-hidden="true">◐</span>
                 <strong>Tarde</strong>
-                <small>14h00 – 19h00</small>
               </label>
 
-              <label class="fdl-cartao-horario">
-                <input type="radio" name="melhorHorario" value="Indiferente">
-                <span>↔</span>
+              <label class="horario">
+                <input
+                  type="radio"
+                  name="melhorHorario"
+                  value="Indiferente"
+                  disabled
+                >
+                <span aria-hidden="true">↔</span>
                 <strong>Indiferente</strong>
-                <small>Qualquer horário</small>
               </label>
-            </div>
+            </fieldset>
           </div>
 
-          <div class="fdl-consentimento-interativo">
+          <p class="ajuda">
+            O dia e o período indicados representam a sua preferência de contacto,
+            não uma marcação de consulta.
+          </p>
+
+          <div class="consentimento">
             <label>
-              <input type="checkbox" id="fdlConsentimentoInterativo" name="consentimento">
+              <input
+                type="checkbox"
+                id="consentimentoConsulta"
+                name="consentimento"
+                disabled
+              >
+
               <span>
-                Autorizo a Farmácia da Liga a utilizar os meus dados para me contactar
-                exclusivamente sobre a Consulta da Menopausa, de acordo com a Política de Privacidade.
-                <b>*</b>
+                Autorizo a utilização dos meus contactos e da informação que
+                partilhei para acompanhamento deste pedido relacionado com
+                a Consulta da Menopausa, de acordo com a
+                <a class="link-privacidade" target="_blank" rel="noopener">
+                  Política de Privacidade
+                </a>.
+                <span class="obrigatorio">*</span>
               </span>
             </label>
           </div>
 
-          <div class="fdl-botoes-passos">
-            <button type="button" class="fdl-botao-voltar" data-voltar="3">
+          <div class="botoes">
+            <button type="button" class="botao-texto" data-voltar="3">
               ← Voltar
             </button>
 
-            <button type="submit" class="fdl-botao-principal" id="fdlEnviarComContacto">
+            <button type="submit" class="botao-principal" id="enviarConsulta">
               Enviar pedido de contacto
-              <span>→</span>
+              <span aria-hidden="true">→</span>
             </button>
           </div>
         </section>
 
-        <!-- ECRÃ DE CONFIRMAÇÃO -->
-        <section class="fdl-passo fdl-passo-final" data-passo="5">
-          <div class="fdl-confirmacao">
-            <div class="fdl-confirmacao-icone">✓</div>
-            <p class="fdl-subtitulo">MENSAGEM ENVIADA</p>
-            <h2 id="fdlTituloConfirmacao">Obrigada pela sua partilha.</h2>
-            <p id="fdlTextoConfirmacao">
-              A nossa equipa irá analisar a sua questão com todo o cuidado.
-            </p>
+        <!-- PASSO FINAL -->
+        <section class="passo" data-passo="5" hidden>
+          <div class="confirmacao">
+            <div class="confirmacao-icone" aria-hidden="true">✓</div>
 
-            <div class="fdl-confirmacao-nota">
-              Este formulário não substitui uma consulta médica, nem deve ser utilizado
-              para situações urgentes.
-            </div>
+            <p class="subtitulo">OBRIGADA PELA SUA PARTILHA</p>
+
+            <h2 id="tituloConfirmacao">Pedido de envio efetuado.</h2>
+
+            <p id="textoConfirmacao"></p>
           </div>
         </section>
+
+        <p class="estado" id="estado" role="status" aria-live="polite"></p>
       </form>
+
+      <footer class="nota-final">
+        Este formulário não substitui uma consulta médica ou aconselhamento
+        individualizado e não deve ser utilizado para situações urgentes.
+        <br>
+        <a class="link-privacidade" target="_blank" rel="noopener">
+          Política de Privacidade
+        </a>
+      </footer>
     </div>
-  </div>
-</section>
+  </main>
 
-<style>
-  .fdl-experiencia-menopausa,
-  .fdl-experiencia-menopausa * {
-    box-sizing: border-box;
-  }
+  <script>
+    (function () {
+      'use strict';
 
-  .fdl-experiencia-menopausa {
-    --bege: #f7f0e8;
-    --bege-claro: #fcfaf7;
-    --rosa: #dfa7b2;
-    --rosa-escuro: #b87383;
-    --rosa-suave: #fceef1;
-    --verde: #abc93f;
-    --verde-escuro: #809d26;
-    --texto: #4d4643;
-    --texto-suave: #716966;
-    --borda: #eadbd4;
+      const SCRIPT_URL =
+        'https://script.google.com/macros/s/AKfycbwJUbkgjo6P3g_f1mEA5AH6aFCoPpn5OxT7sPelNzWyRklfqAeRVmu_lQV5xUjf7B33/exec';
 
-    width: 100%;
-    padding: 30px 16px;
-    background: linear-gradient(135deg, #fcf9f4 0%, #f9eef1 100%);
-    color: var(--texto);
-    font-family: "Montserrat", Arial, sans-serif;
-  }
+      // SUBSTITUA PELO ENDEREÇO REAL DA POLÍTICA DE PRIVACIDADE.
+      const PRIVACIDADE_URL =
+        'COLE_AQUI_O_URL_DA_POLITICA_DE_PRIVACIDADE';
 
-  .fdl-experiencia-cartao {
-    max-width: 850px;
-    margin: 0 auto;
-    overflow: hidden;
-    border: 1px solid var(--borda);
-    border-radius: 24px;
-    background: #fff;
-    box-shadow: 0 16px 42px rgba(114, 75, 67, .12);
-  }
+      const form = document.getElementById('form');
+      const questao = document.getElementById('questao');
+      const email = document.getElementById('email');
+      const consentimentoEmail =
+        document.getElementById('consentimentoEmail');
 
-  .fdl-experiencia-hero {
-    background: #fbf7f1;
-    line-height: 0;
-  }
+      const blocoEmail = document.getElementById('blocoEmail');
+      const continuarEscolha =
+        document.getElementById('continuarEscolha');
 
-  .fdl-experiencia-hero img {
-    display: block;
-    width: 100%;
-    max-height: 280px;
-    object-fit: cover;
-    object-position: center;
-  }
+      const enviarConsulta = document.getElementById('enviarConsulta');
+      const erroEscolha = document.getElementById('erroEscolha');
+      const estado = document.getElementById('estado');
 
-  .fdl-experiencia-corpo {
-    padding: 38px 50px 50px;
-  }
+      const nome = document.getElementById('nome');
+      const telefone = document.getElementById('telefone');
+      const dia = document.getElementById('dia');
 
-  .fdl-progresso {
-    margin-bottom: 33px;
-  }
+      const consentimentoConsulta =
+        document.getElementById('consentimentoConsulta');
 
-  .fdl-progresso-topo {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 9px;
-    color: var(--texto-suave);
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: .3px;
-  }
-
-  .fdl-progresso-trilho {
-    width: 100%;
-    height: 6px;
-    overflow: hidden;
-    border-radius: 99px;
-    background: #f0e6e2;
-  }
-
-  .fdl-progresso-barra {
-    width: 25%;
-    height: 100%;
-    border-radius: inherit;
-    background: linear-gradient(90deg, var(--verde), var(--rosa));
-    transition: width .35s ease;
-  }
-
-  .fdl-passo {
-    display: none;
-    animation: fdlEntrar .35s ease;
-  }
-
-  .fdl-passo.ativo {
-    display: block;
-  }
-
-  @keyframes fdlEntrar {
-    from {
-      transform: translateX(12px);
-      opacity: 0;
-    }
-
-    to {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
-
-  .fdl-passos-intro {
-    max-width: 650px;
-    margin: 0 auto 28px;
-    text-align: center;
-  }
-
-  .fdl-etiqueta,
-  .fdl-subtitulo {
-    color: var(--verde-escuro);
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 1.1px;
-  }
-
-  .fdl-etiqueta {
-    display: inline-block;
-    margin-bottom: 13px;
-    padding: 7px 13px;
-    border-radius: 99px;
-    background: #eff5da;
-  }
-
-  .fdl-passos-intro h1 {
-    margin: 0 0 13px;
-    color: var(--rosa-escuro);
-    font-size: 34px;
-    line-height: 1.2;
-  }
-
-  .fdl-passos-intro p,
-  .fdl-texto-passo {
-    margin: 0;
-    color: var(--texto-suave);
-    font-size: 14px;
-    line-height: 1.75;
-  }
-
-  .fdl-sabia-dinamico {
-    padding: 25px;
-    border-radius: 16px;
-    background: var(--bege);
-  }
-
-  .fdl-sabia-cabecalho {
-    display: flex;
-    gap: 9px;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-
-  .fdl-sabia-cabecalho p {
-    margin: 0;
-    color: var(--rosa-escuro);
-    font-size: 16px;
-    font-weight: 700;
-  }
-
-  .fdl-sabia-ponto {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: var(--verde);
-  }
-
-  .fdl-sabia-cartao {
-    display: none;
-    min-height: 180px;
-    padding: 24px;
-    border: 1px solid #ead7d1;
-    border-radius: 14px;
-    background: #fff;
-    animation: fdlAparecer .3s ease;
-  }
-
-  .fdl-sabia-cartao.ativo {
-    display: block;
-  }
-
-  @keyframes fdlAparecer {
-    from {
-      transform: translateY(7px);
-      opacity: 0;
-    }
-
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-
-  .fdl-sabia-numero {
-    display: block;
-    margin-bottom: 12px;
-    color: var(--rosa);
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-  }
-
-  .fdl-sabia-cartao h2 {
-    margin: 0 0 10px;
-    color: var(--texto);
-    font-size: 20px;
-    line-height: 1.35;
-  }
-
-  .fdl-sabia-cartao p {
-    margin: 0;
-    color: var(--texto-suave);
-    font-size: 13px;
-    line-height: 1.7;
-  }
-
-  .fdl-sabia-navegacao {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 17px;
-  }
-
-  .fdl-sabia-paginacao {
-    display: flex;
-    gap: 7px;
-  }
-
-  .fdl-sabia-paginacao button {
-    width: 8px;
-    height: 8px;
-    padding: 0;
-    border: 0;
-    border-radius: 50%;
-    background: #dbc7c2;
-    cursor: pointer;
-  }
-
-  .fdl-sabia-paginacao button.ativo {
-    width: 24px;
-    border-radius: 99px;
-    background: var(--rosa-escuro);
-  }
-
-  .fdl-botao-secundario,
-  .fdl-botao-voltar {
-    border: 0;
-    background: transparent;
-    color: var(--rosa-escuro);
-    font-family: "Montserrat", Arial, sans-serif;
-    font-size: 12px;
-    font-weight: 600;
-    cursor: pointer;
-  }
-
-  .fdl-botao-secundario:disabled {
-    cursor: default;
-    opacity: .35;
-  }
-
-  .fdl-botao-principal {
-    display: flex;
-    width: 100%;
-    min-height: 53px;
-    margin-top: 25px;
-    padding: 14px 20px;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    border: 0;
-    border-radius: 11px;
-    background: var(--rosa-escuro);
-    color: #fff;
-   font-family: "Montserrat", Arial, sans-serif;
-    font-size: 14px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: transform .2s ease, background .2s ease;
-  }
-
-  .fdl-botao-principal:hover {
-    transform: translateY(-1px);
-    background: #a65d6e;
-  }
-
-  .fdl-botao-principal:disabled {
-    cursor: wait;
-    opacity: .65;
-    transform: none;
-  }
-
-  .fdl-botao-principal span {
-    font-size: 20px;
-    line-height: 1;
-  }
-
-  .fdl-nota-passos {
-    margin: 14px 0 0;
-    color: var(--texto-suave);
-    font-size: 11px;
-    text-align: center;
-  }
-
-  .fdl-titulo-passo {
-    display: flex;
-    gap: 13px;
-    align-items: center;
-    margin-bottom: 17px;
-  }
-
-  .fdl-numero-passo {
-    display: flex;
-    flex: 0 0 36px;
-    width: 36px;
-    height: 36px;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background: var(--verde);
-    color: #fff;
-    font-size: 14px;
-    font-weight: 700;
-  }
-
-  .fdl-titulo-passo .fdl-subtitulo {
-    margin: 0 0 4px;
-  }
-
-  .fdl-titulo-passo h2 {
-    margin: 0;
-    color: var(--rosa-escuro);
-    font-size: 23px;
-    line-height: 1.3;
-  }
-
-  .fdl-label-campo,
-  .fdl-campo-interativo > label {
-    display: block;
-    margin: 25px 0 8px;
-    color: var(--texto);
-    font-size: 14px;
-    font-weight: 600;
-  }
-
-  .fdl-label-campo span,
-  .fdl-consentimento-interativo b {
-    color: var(--rosa-escuro);
-  }
-
-  .fdl-experiencia-menopausa textarea,
-  .fdl-experiencia-menopausa input[type="text"],
-  .fdl-experiencia-menopausa input[type="tel"],
-  .fdl-experiencia-menopausa select {
-    width: 100%;
-    border: 1px solid #e5d7d1;
-    border-radius: 10px;
-    background: #fff;
-    color: var(--texto);
-    font-family: "Montserrat", Arial, sans-serif;
-    font-size: 16px;
-  }
-
-  .fdl-experiencia-menopausa textarea {
-    min-height: 170px;
-    padding: 15px;
-    resize: vertical;
-    line-height: 1.65;
-  }
-
-  .fdl-experiencia-menopausa input[type="text"],
-  .fdl-experiencia-menopausa input[type="tel"],
-  .fdl-experiencia-menopausa select {
-    height: 49px;
-    padding: 0 14px;
-  }
-
-  .fdl-experiencia-menopausa :focus-visible {
-    outline: 3px solid var(--rosa);
-    outline-offset: 3px;
-  }
-
-  .fdl-textarea-rodape {
-    display: flex;
-    justify-content: space-between;
-    gap: 15px;
-    margin-top: 8px;
-    color: var(--texto-suave);
-    font-size: 11px;
-    line-height: 1.5;
-  }
-
-  .fdl-botoes-passos {
-    display: flex;
-    gap: 15px;
-    align-items: center;
-    margin-top: 27px;
-  }
-
-  .fdl-botoes-passos .fdl-botao-principal {
-    width: auto;
-    min-width: 190px;
-    margin: 0 0 0 auto;
-  }
-
-  .fdl-escolhas-acao {
-    display: grid;
-    gap: 14px;
-    margin-top: 26px;
-  }
-
-  .fdl-cartao-acao {
-    display: flex;
-    position: relative;
-    gap: 15px;
-    align-items: center;
-    padding: 19px;
-    border: 2px solid #eadbd5;
-    border-radius: 13px;
-    background: #fff;
-    cursor: pointer;
-    transition: transform .2s ease, border-color .2s ease;
-  }
-
-  .fdl-cartao-acao:hover {
-    transform: translateY(-2px);
-    border-color: var(--rosa);
-  }
-
-  .fdl-cartao-acao.selecionado,
-  .fdl-cartao-horario.selecionado {
-    border-color: var(--rosa-escuro);
-    background: #fffafb;
-  }
-
-  .fdl-cartao-acao input,
-  .fdl-cartao-horario input {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    opacity: 0;
-  }
-
-  .fdl-cartao-acao:focus-within,
-  .fdl-cartao-horario:focus-within {
-    outline: 3px solid var(--rosa);
-    outline-offset: 3px;
-  }
-
-  .fdl-cartao-icone {
-    display: flex;
-    flex: 0 0 43px;
-    width: 43px;
-    height: 43px;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background: var(--bege);
-    color: var(--rosa-escuro);
-    font-size: 22px;
-  }
-
-  .fdl-cartao-texto {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-  }
-
-  .fdl-cartao-texto strong {
-    color: var(--texto);
-    font-size: 14px;
-  }
-
-  .fdl-cartao-texto small {
-    color: var(--texto-suave);
-    font-size: 12px;
-    line-height: 1.5;
-  }
-
-  .fdl-cartao-check {
-    display: flex;
-    flex: 0 0 23px;
-    width: 23px;
-    height: 23px;
-    margin-left: auto;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #dfcfca;
-    border-radius: 50%;
-    color: transparent;
-    font-size: 13px;
-  }
-
-  .fdl-cartao-acao.selecionado .fdl-cartao-check {
-    border-color: var(--verde);
-    background: var(--verde);
-    color: #fff;
-  }
-
-  .fdl-erro-passo {
-    min-height: 18px;
-    margin: 10px 0 0;
-    color: #aa5664;
-    font-size: 12px;
-  }
-
-  .fdl-caixa-privacidade {
-    margin: 20px 0 23px;
-    padding: 15px 17px;
-    border-left: 4px solid var(--rosa);
-    border-radius: 7px;
-    background: var(--rosa-suave);
-    color: #765961;
-    font-size: 12px;
-    line-height: 1.65;
-  }
-
-  .fdl-caixa-privacidade a {
-    color: var(--rosa-escuro);
-    font-weight: 700;
-  }
-
-  .fdl-campo-interativo {
-    margin-top: 20px;
-  }
-
-  .fdl-horarios {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-  }
-
-  .fdl-cartao-horario {
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    gap: 5px;
-    align-items: center;
-    padding: 17px 8px;
-    border: 2px solid #e6d8d2;
-    border-radius: 11px;
-    background: #fff;
-    text-align: center;
-    cursor: pointer;
-  }
-
-  .fdl-cartao-horario > span {
-    color: var(--rosa-escuro);
-    font-size: 20px;
-  }
-
-  .fdl-cartao-horario strong {
-    font-size: 13px;
-  }
-
-  .fdl-cartao-horario small {
-    color: var(--texto-suave);
-    font-size: 10px;
-  }
-
-  .fdl-consentimento-interativo {
-    margin-top: 23px;
-    padding: 15px;
-    border-radius: 10px;
-    background: var(--bege);
-  }
-
-  .fdl-consentimento-interativo label {
-    display: flex;
-    gap: 10px;
-    align-items: flex-start;
-    color: var(--texto-suave);
-    font-size: 12px;
-    line-height: 1.6;
-    cursor: pointer;
-  }
-
-  .fdl-consentimento-interativo input {
-    flex: 0 0 auto;
-    width: 17px;
-    height: 17px;
-    margin: 2px 0 0;
-    accent-color: var(--rosa-escuro);
-  }
-
-  .fdl-passo-final {
-    min-height: 350px;
-  }
-
-  .fdl-confirmacao {
-    max-width: 540px;
-    margin: 35px auto 0;
-    text-align: center;
-  }
-
-  .fdl-confirmacao-icone {
-    display: flex;
-    width: 76px;
-    height: 76px;
-    margin: 0 auto 20px;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background: var(--verde);
-    box-shadow: 0 0 0 10px #eff5db;
-    color: #fff;
-    font-size: 36px;
-  }
-
-  .fdl-confirmacao h2 {
-    color: var(--rosa-escuro);
-    font-size: 26px;
-  }
-
-  .fdl-confirmacao > p {
-    color: var(--texto-suave);
-    font-size: 14px;
-    line-height: 1.75;
-  }
-
-  .fdl-confirmacao-nota {
-    margin-top: 27px;
-    padding: 14px;
-    border-radius: 9px;
-    background: var(--bege);
-    color: var(--texto-suave);
-    font-size: 11px;
-    line-height: 1.6;
-  }
-
-  @media (max-width: 640px) {
-    .fdl-experiencia-menopausa {
-      padding: 17px 10px;
-    }
-
-    .fdl-experiencia-corpo {
-      padding: 30px 17px 37px;
-    }
-
-    .fdl-passos-intro h1 {
-      font-size: 27px;
-    }
-
-    .fdl-sabia-dinamico,
-    .fdl-sabia-cartao {
-      padding: 17px;
-    }
-
-    .fdl-titulo-passo h2 {
-      font-size: 20px;
-    }
-
-    .fdl-botoes-passos .fdl-botao-principal {
-      min-width: 0;
-    }
-
-    .fdl-horarios {
-      grid-template-columns: 1fr;
-    }
-
-    .fdl-textarea-rodape {
-      flex-direction: column;
-      gap: 3px;
-    }
-
-    .fdl-experiencia-hero img {
-      max-height: none;
-      height: auto;
-    }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .fdl-experiencia-menopausa * {
-      animation: none !important;
-      transition: none !important;
-    }
-  }
-</style>
-
-<script>
-(function () {
-  function iniciarFormulario() {
-    const form = document.getElementById('fdlFormularioInterativo');
-    if (!form || form.dataset.inicializado) return;
-    form.dataset.inicializado = 'sim';
-
-    const root = document.getElementById('fdlExperienciaMenopausa');
-    const questao = document.getElementById('fdlQuestaoInterativa');
-    const contador = document.getElementById('fdlContadorInterativo');
-    const continuar = document.getElementById('fdlContinuarEscolha');
-    const enviarContacto = document.getElementById('fdlEnviarComContacto');
-    const erroEscolha = document.getElementById('fdlErroEscolha');
-
-    const camposContacto = [
-      document.getElementById('fdlNomeInterativo'),
-      document.getElementById('fdlTelefoneInterativo'),
-      document.getElementById('fdlDiaInterativo'),
-      document.getElementById('fdlConsentimentoInterativo')
-    ];
-
-    const horarios = Array.from(
-      form.querySelectorAll('input[name="melhorHorario"]')
-    );
-
-    const SCRIPT_URL =
-      'https://script.google.com/macros/s/AKfycbwJUbkgjo6P3g_f1mEA5AH6aFCoPpn5OxT7sPelNzWyRklfqAeRVmu_lQV5xUjf7B33/exec';
-
-    let curiosidade = 1;
-    let aEnviar = false;
-
-    const estado = document.createElement('p');
-    estado.setAttribute('role', 'status');
-    estado.setAttribute('aria-live', 'polite');
-    estado.style.cssText =
-      'margin:16px 0 0;font-size:13px;line-height:1.6;color:#765961;';
-    form.appendChild(estado);
-
-    function mostrarPasso(numero) {
-      form.querySelectorAll('.fdl-passo').forEach(function (passo) {
-        const ativo = Number(passo.dataset.passo) === numero;
-        passo.classList.toggle('ativo', ativo);
-        passo.setAttribute('aria-hidden', String(!ativo));
-      });
-
-      root.querySelector('.fdl-progresso').style.display =
-        numero === 5 ? 'none' : 'block';
-
-      if (numero !== 5) {
-        document.getElementById('fdlPassoTexto').textContent =
-          'Passo ' + numero + ' de 4';
-
-        document.getElementById('fdlProgressoPercentagem').textContent =
-          (numero * 25) + '%';
-
-        document.getElementById('fdlProgressoBarra').style.width =
-          (numero * 25) + '%';
-      }
-
-      estado.textContent = '';
-
-      const titulo = form.querySelector(
-        '[data-passo="' + numero + '"] h1, ' +
-        '[data-passo="' + numero + '"] h2'
+      const horarios = Array.from(
+        form.querySelectorAll('input[name="melhorHorario"]')
       );
 
-      if (titulo) {
-        titulo.tabIndex = -1;
-        titulo.focus({ preventScroll: true });
-        titulo.scrollIntoView({ block: 'nearest' });
-      }
-    }
+      const camposConsulta = [
+        nome,
+        telefone,
+        dia,
+        consentimentoConsulta,
+        ...horarios
+      ];
 
-    function mostrarCuriosidade(numero) {
-      curiosidade = Math.max(1, Math.min(3, numero));
+      let curiosidadeAtual = 1;
+      let passoAtual = 1;
+      let aEnviar = false;
+      let envioConcluido = false;
 
-      form.querySelectorAll('.fdl-sabia-cartao').forEach(function (cartao) {
-        cartao.classList.toggle(
-          'ativo',
-          Number(cartao.dataset.curiosidade) === curiosidade
+      const privacidadeConfigurada =
+        /^https?:\/\//i.test(PRIVACIDADE_URL);
+
+      document.querySelectorAll('.link-privacidade').forEach(function (link) {
+        if (privacidadeConfigurada) {
+          link.href = PRIVACIDADE_URL;
+        } else {
+          link.removeAttribute('href');
+          link.title = 'Política de Privacidade por configurar';
+        }
+      });
+
+      if (!privacidadeConfigurada) {
+        console.warn(
+          'Configure PRIVACIDADE_URL antes de disponibilizar o formulário.'
         );
-      });
-
-      form.querySelectorAll('[data-ir-curiosidade]').forEach(function (botao) {
-        const ativo = Number(botao.dataset.irCuriosidade) === curiosidade;
-        botao.classList.toggle('ativo', ativo);
-        botao.setAttribute('aria-pressed', String(ativo));
-      });
-
-      document.getElementById('fdlSabiaAnterior').disabled =
-        curiosidade === 1;
-
-      document.getElementById('fdlSabiaSeguinte').disabled =
-        curiosidade === 3;
-    }
-
-    function validarQuestao() {
-      questao.setCustomValidity(
-        questao.value.trim() ? '' : 'Escreva a sua questão antes de continuar.'
-      );
-      return questao.reportValidity();
-    }
-
-    function definirContacto(ativo) {
-      camposContacto.forEach(function (campo) {
-        campo.required = ativo;
-      });
-
-      horarios.forEach(function (campo) {
-        campo.required = ativo;
-      });
-    }
-
-    function atualizarCartoes() {
-      form.querySelectorAll(
-        '.fdl-cartao-acao, .fdl-cartao-horario'
-      ).forEach(function (cartao) {
-        cartao.classList.toggle(
-          'selecionado',
-          cartao.querySelector('input').checked
-        );
-      });
-
-      const escolha = form.querySelector(
-        'input[name="interesseConsulta"]:checked'
-      );
-
-      continuar.innerHTML =
-        escolha && !escolha.value.startsWith('Sim, gostaria')
-          ? 'Enviar a minha questão <span>→</span>'
-          : 'Continuar <span>→</span>';
-    }
-
-    async function enviar(comContacto) {
-      if (aEnviar || !validarQuestao()) return;
-
-      definirContacto(comContacto);
-
-      if (comContacto && !form.reportValidity()) return;
-
-      const dados = new FormData(form);
-      dados.set('questaoLivre', questao.value.trim());
-
-      // Não envia contactos antigos se a utente escolher o percurso anónimo.
-      if (!comContacto) {
-        ['nome', 'telefone', 'melhorDia', 'melhorHorario', 'consentimento']
-          .forEach(function (campo) {
-            dados.delete(campo);
-          });
       }
 
-      aEnviar = true;
-      continuar.disabled = true;
-      enviarContacto.disabled = true;
-      estado.textContent = 'A enviar a sua mensagem…';
-
-      try {
-        await fetch(SCRIPT_URL, {
-          method: 'POST',
-          body: dados,
-          mode: 'no-cors'
-        });
-
-        mostrarPasso(5);
-
-        document.getElementById('fdlTituloConfirmacao').textContent =
-          'Obrigada pela sua partilha.';
-
-        document.getElementById('fdlTextoConfirmacao').textContent =
-          comContacto
-            ? 'O pedido de envio da sua questão e dos seus contactos foi efetuado.'
-            : 'O pedido de envio da sua questão foi efetuado sem nome ou contactos.';
-
-        // Uma resposta no-cors não permite confirmar a gravação na Sheet.
-estado.textContent = '';
-      } catch (erro) {
-        console.error('Erro no envio:', erro);
-        estado.textContent =
-          'Não foi possível efetuar o envio. Os seus dados foram mantidos. ' +
-          'Por favor, tente novamente.';
-      } finally {
-        aEnviar = false;
-        continuar.disabled = false;
-        enviarContacto.disabled = false;
-      }
-    }
-
-    form.addEventListener('click', function (evento) {
-      const botao = evento.target.closest('button');
-      if (!botao || !form.contains(botao)) return;
-
-      if (botao.dataset.avancar) {
-        const destino = Number(botao.dataset.avancar);
-        if (destino === 3 && !validarQuestao()) return;
-        mostrarPasso(destino);
-      }
-
-      if (botao.dataset.voltar) {
-        mostrarPasso(Number(botao.dataset.voltar));
-      }
-
-      if (botao.dataset.irCuriosidade) {
-        mostrarCuriosidade(Number(botao.dataset.irCuriosidade));
-      }
-
-      if (botao.id === 'fdlSabiaAnterior') {
-        mostrarCuriosidade(curiosidade - 1);
-      }
-
-      if (botao.id === 'fdlSabiaSeguinte') {
-        mostrarCuriosidade(curiosidade + 1);
-      }
-
-      if (botao.id === 'fdlContinuarEscolha') {
-        const escolha = form.querySelector(
+      function obterEscolha() {
+        return form.querySelector(
           'input[name="interesseConsulta"]:checked'
         );
+      }
 
-        if (!escolha) {
-          erroEscolha.textContent =
-            'Escolha como prefere continuar.';
-          return;
+      function obterPercurso() {
+        const escolha = obterEscolha();
+        return escolha ? escolha.dataset.percurso : '';
+      }
+
+      function mostrarPasso(numero) {
+        passoAtual = numero;
+
+        form.querySelectorAll('.passo').forEach(function (passo) {
+          passo.hidden = Number(passo.dataset.passo) !== numero;
+        });
+
+        document.getElementById('blocoProgresso').hidden = numero === 5;
+
+        if (numero !== 5) {
+          const percentagem = numero * 25;
+
+          document.getElementById('passoTexto').textContent =
+            'Passo ' + numero + ' de 4';
+
+          document.getElementById('progressoPercentagem').textContent =
+            percentagem + '%';
+
+          document.getElementById('barraProgresso').style.width =
+            percentagem + '%';
+
+          document.getElementById('progressoAcessivel')
+            .setAttribute('aria-valuenow', String(percentagem));
         }
+
+        estado.textContent = '';
+
+        const titulo = form.querySelector(
+          '[data-passo="' + numero + '"] h1, ' +
+          '[data-passo="' + numero + '"] h2'
+        );
+
+        if (titulo) {
+          titulo.tabIndex = -1;
+          titulo.focus({ preventScroll: true });
+          titulo.scrollIntoView({ block: 'nearest' });
+        }
+      }
+
+      function mostrarCuriosidade(numero) {
+        curiosidadeAtual = Math.max(1, Math.min(3, numero));
+
+        form.querySelectorAll('[data-curiosidade]').forEach(function (cartao) {
+          cartao.hidden =
+            Number(cartao.dataset.curiosidade) !== curiosidadeAtual;
+        });
+
+        form.querySelectorAll('[data-curiosidade-botao]')
+          .forEach(function (botao) {
+            botao.setAttribute(
+              'aria-pressed',
+              String(
+                Number(botao.dataset.curiosidadeBotao) === curiosidadeAtual
+              )
+            );
+          });
+
+        document.getElementById('curiosidadeAnterior').disabled =
+          curiosidadeAtual === 1;
+
+        document.getElementById('curiosidadeSeguinte').disabled =
+          curiosidadeAtual === 3;
+      }
+
+      function configurarPercurso() {
+        const percurso = obterPercurso();
+        const porEmail = percurso === 'email';
+        const porConsulta = percurso === 'consulta';
+
+        blocoEmail.hidden = !porEmail;
+
+        [email, consentimentoEmail].forEach(function (campo) {
+          campo.disabled = !porEmail;
+          campo.required = porEmail;
+        });
+
+        camposConsulta.forEach(function (campo) {
+          campo.disabled = !porConsulta;
+          campo.required = porConsulta;
+        });
+
+        form.querySelectorAll('.opcao, .horario')
+          .forEach(function (cartao) {
+            const input = cartao.querySelector('input');
+
+            cartao.classList.toggle(
+              cartao.classList.contains('horario')
+                ? 'selecionado'
+                : 'selecionada',
+              input.checked
+            );
+          });
+
+        continuarEscolha.textContent = porEmail
+          ? 'Enviar questão para resposta por email →'
+          : 'Continuar →';
 
         erroEscolha.textContent = '';
+      }
 
-        if (escolha.value.startsWith('Sim, gostaria')) {
-          definirContacto(true);
-          mostrarPasso(4);
-        } else {
-          enviar(false);
+      function validarQuestao() {
+        questao.setCustomValidity(
+          questao.value.trim()
+            ? ''
+            : 'Escreva a sua questão antes de continuar.'
+        );
+
+        return questao.reportValidity();
+      }
+
+      function validarPercurso(percurso) {
+        if (!validarQuestao()) {
+          mostrarPasso(2);
+          questao.reportValidity();
+          return false;
+        }
+
+        if (percurso === 'email') {
+          email.value = email.value.trim();
+
+          if (!email.reportValidity()) return false;
+          if (!consentimentoEmail.reportValidity()) return false;
+
+          return true;
+        }
+
+        if (percurso === 'consulta') {
+          nome.value = nome.value.trim();
+          telefone.value = telefone.value.trim();
+
+          nome.setCustomValidity(
+            nome.value ? '' : 'Indique o seu nome.'
+          );
+
+          telefone.setCustomValidity(
+            telefone.value ? '' : 'Indique o seu telefone ou telemóvel.'
+          );
+
+          return form.reportValidity();
+        }
+
+        return false;
+      }
+
+      function bloquearInterface(bloquear) {
+        form.querySelectorAll('button').forEach(function (botao) {
+          botao.disabled = bloquear || envioConcluido;
+        });
+
+        if (!bloquear && !envioConcluido) {
+          mostrarCuriosidade(curiosidadeAtual);
         }
       }
-    });
 
-    form.addEventListener('change', atualizarCartoes);
+      async function enviar(percurso) {
+        if (aEnviar || envioConcluido) return;
 
-    questao.addEventListener('input', function () {
-      questao.setCustomValidity('');
-      contador.textContent = questao.value.length + ' / 2000';
-    });
+        configurarPercurso();
 
-    form.addEventListener('submit', function (evento) {
-      evento.preventDefault();
+        if (!validarPercurso(percurso)) return;
 
-      const escolha = form.querySelector(
-        'input[name="interesseConsulta"]:checked'
-      );
+        const dados = new FormData(form);
+        dados.set('questaoLivre', questao.value.trim());
 
-      if (escolha && escolha.value.startsWith('Sim, gostaria')) {
-        enviar(true);
+        if (percurso === 'email') {
+          dados.set('email', email.value.trim());
+
+          [
+            'nome',
+            'telefone',
+            'melhorDia',
+            'melhorHorario',
+            'consentimento'
+          ].forEach(function (campo) {
+            dados.delete(campo);
+          });
+        } else {
+          dados.delete('email');
+          dados.delete('consentimentoEmail');
+        }
+
+        aEnviar = true;
+        bloquearInterface(true);
+        estado.textContent = 'A enviar a sua mensagem…';
+
+        try {
+          await fetch(SCRIPT_URL, {
+            method: 'POST',
+            body: dados,
+            mode: 'no-cors'
+          });
+
+          envioConcluido = true;
+          mostrarPasso(5);
+
+          document.getElementById('tituloConfirmacao').textContent =
+            'Obrigada pela sua partilha.';
+
+          document.getElementById('textoConfirmacao').textContent =
+            percurso === 'email'
+              ? 'O pedido de envio da sua questão foi efetuado. ' +
+                'A nossa equipa responderá para o email indicado.'
+              : 'O pedido de envio da sua questão e dos seus contactos ' +
+                'foi efetuado. Indicou a sua preferência de contacto ' +
+                'para saber mais sobre a Consulta da Menopausa.';
+
+          // O modo no-cors não permite ler a confirmação do servidor.
+          estado.textContent = '';
+        } catch (erro) {
+          console.error('Erro ao enviar o formulário:', erro);
+
+          estado.textContent =
+            'Não foi possível efetuar o envio. ' +
+            'Os dados preenchidos foram mantidos. Tente novamente.';
+        } finally {
+          aEnviar = false;
+          bloquearInterface(false);
+        }
       }
-    });
 
-    definirContacto(false);
-    mostrarCuriosidade(1);
-    atualizarCartoes();
-    console.info('Formulário Farmácia da Liga inicializado.');
-  }
+      form.addEventListener('click', function (evento) {
+        const botao = evento.target.closest('button');
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', iniciarFormulario);
-  } else {
-    iniciarFormulario();
-  }
-})();
-</script>
+        if (!botao || aEnviar || envioConcluido) return;
+
+        if (botao.dataset.avancar) {
+          const destino = Number(botao.dataset.avancar);
+
+          if (destino === 3 && !validarQuestao()) return;
+
+          mostrarPasso(destino);
+        }
+
+        if (botao.dataset.voltar) {
+          mostrarPasso(Number(botao.dataset.voltar));
+        }
+
+        if (botao.dataset.curiosidadeBotao) {
+          mostrarCuriosidade(Number(botao.dataset.curiosidadeBotao));
+        }
+
+        if (botao.id === 'curiosidadeAnterior') {
+          mostrarCuriosidade(curiosidadeAtual - 1);
+        }
+
+        if (botao.id === 'curiosidadeSeguinte') {
+          mostrarCuriosidade(curiosidadeAtual + 1);
+        }
+
+        if (botao.id === 'continuarEscolha') {
+          const percurso = obterPercurso();
+
+          if (!percurso) {
+            erroEscolha.textContent =
+              'Escolha como prefere receber apoio.';
+            return;
+          }
+
+          configurarPercurso();
+
+          if (percurso === 'consulta') {
+            mostrarPasso(4);
+          } else {
+            enviar('email');
+          }
+        }
+      });
+
+      form.addEventListener('change', function (evento) {
+        if (
+          evento.target.name === 'interesseConsulta' ||
+          evento.target.name === 'melhorHorario'
+        ) {
+          configurarPercurso();
+        }
+      });
+
+      questao.addEventListener('input', function () {
+        questao.setCustomValidity('');
+
+        document.getElementById('contador').textContent =
+          questao.value.length + ' / 2000';
+      });
+
+      [nome, telefone].forEach(function (campo) {
+        campo.addEventListener('input', function () {
+          campo.setCustomValidity('');
+        });
+      });
+
+      form.addEventListener('submit', function (evento) {
+        evento.preventDefault();
+
+        if (passoAtual === 4 && obterPercurso() === 'consulta') {
+          enviar('consulta');
+        } else if (passoAtual === 3 && obterPercurso() === 'email') {
+          enviar('email');
+        }
+      });
+
+      configurarPercurso();
+      mostrarCuriosidade(1);
+
+      console.info('Formulário Farmácia da Liga inicializado.');
+    })();
+  </script>
+</body>
+</html>
